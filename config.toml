@@ -1,6 +1,6 @@
-author = "cydave"
-title = "PaperMod"
-base_url = "https://cydave.github.io/zola-theme-papermod"
+author = "vnprc"
+title = "Hashpool"
+base_url = "https://hashpool.dev"
 compile_sass = true
 build_search_index = true 
 generate_feeds = true
@@ -36,7 +36,7 @@ highlight_code = true
 [extra]
 
 [extra.papermod]
-title = "PaperMod"
+title = "Hashpool"
 default_theme = "auto"
 theme = "light"
 language_direction = "auto"
@@ -54,17 +54,13 @@ edit_post_url = "https://github.com/cydave/zola-theme-papermod/tree/master"
 #copyright = ""
 date_format = "%Y-%m-%d"
 navigation = [
-    { url = "$BASE_URL/archive", title = "Archive" },
-    { url = "$BASE_URL/tags", title = "Tags" },
-    { url = "$BASE_URL/search", title = "Search" },
-    { url = "https://getzola.org/", title = "Zola", is_external = true }
+    { url = "https://github.com/vnprc/hashpool", title = "Github" },
+    { url = "$BASE_URL/blog", title = "Blog" },
+    { url = "$BASE_URL/dev-logs", title = "Developer Logs" },
 ]
 
-home_title = "PaperMod"
-home_content = "Welcome to a demo of the PaperMod theme!<br><b>PaperMod</b> is a simple but fast and responsive theme with a useful feature-set that enhances UX.<br>Do give a 🌟 on Github !<br>PaperMod is based on the hugo-PaperMod theme."
+home_title = "Hashpool"
+home_content = "Hashpool is an accountless pleb mining pool powered by ecash."
 social_icons = [
-    { url = "https://github.com/cydave", title = "GitHub", icon = "github" },
-    { url = "https://infosec.exchange/@cydave", title = "Mastodon", icon = "mastodon" },
-    { url = "https://twitter.com/_cydave", title = "Twitter", icon = "twitter" },
-    { url = "$BASE_URL/atom.xml", title = "RSS", icon = "rss" },
+    { url = "https://github.com/vnprc/hashpool", title = "GitHub", icon = "github" },
 ]

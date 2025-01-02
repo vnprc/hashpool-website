@@ -54,9 +54,10 @@ edit_post_url = "https://github.com/cydave/zola-theme-papermod/tree/master"
 #copyright = ""
 date_format = "%Y-%m-%d"
 navigation = [
-    { url = "https://github.com/vnprc/hashpool", title = "Github" },
-    { url = "$BASE_URL/dev-logs", title = "Developer Logs" },
+    { url = "$BASE_URL", title = "About" },
+    { url = "$BASE_URL/dev-logs", title = "Development Logs" },
     { url = "$BASE_URL/search", title = "Search" },
+    { url = "https://github.com/vnprc/hashpool", title = "Github" },
 ]
 
 home_title = "Hashpool"

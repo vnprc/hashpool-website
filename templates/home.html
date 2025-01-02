@@ -12,28 +12,26 @@
     {% endblock %}
     <main class="main">
         {% block main %}
-        <section class="featured-article">
-            <div class="container">
-                <h1>What is Hashpool?</h1>
-                <br>
-                <p>
-                    Hashpool is an accountless mining pool that uses ecash to represent mining shares. This is a 
-                    fundamentally more private arrangement for miners and enables a free and private 
-                    market for hashrate.
-                </p>
+        <article>
+            <header class="entry-header">
+                <h1>Learn About Hashpool</h1>
+            </header>
+            <div class="entry-content">
+                Fill your mind
             </div>
-        </section>
-        <section class="articles-toc">
-            <div class="container">
-                <h1>Table of Contents</h1>
-                <ul>
-                    <li><a href="/articles/what-is-hashpool/">What is Hashpool?</a></li>
-                    <li><a href="/articles/article-2/">Article 2 Title</a></li>
-                    <li><a href="/articles/article-3/">Article 3 Title</a></li>
-                    <!-- Add more articles manually as needed -->
-                </ul>
-            </div>
-        </section>
+        </article>
+        </article class="post-entry">
+            <body>
+                <div>
+                    <ul>
+                        <li><a href="/articles/what-is-hashpool/">What is Hashpool?</a></li>
+                        <li><a href="/articles/article-2/">Article 2 Title</a></li>
+                        <li><a href="/articles/article-3/">Article 3 Title</a></li>
+                        <!-- Add more articles manually as needed -->
+                    </ul>
+                </div>
+            </body>
+        </article>
         {% endblock %}
     </main>
     {% block footer %}

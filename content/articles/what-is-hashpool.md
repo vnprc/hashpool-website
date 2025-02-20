@@ -18,7 +18,7 @@ Some pools offer lower thresholds for lightning withdrawals, but lightning comes
 
 #### Mining Privacy
 
-But that's not all! Mining pools today are terrible for privacy. Most pools require KYC before you create an account. Even for the pools that don't require KYC they know three critical pieces of information: your IP address (easily be linked to your identity), your hashrate, and your bitcoin payouts. If you want to mine privately or at a small scale, there just aren't any good options.
+But that's not all! Mining pools today are terrible for privacy. Most pools require KYC before you create an account. Even for the pools that don't require KYC they know three critical pieces of information: your IP address (easily linked to your identity), your hashrate, and your bitcoin payouts. If you want to mine privately or at a small scale, there just aren't any good options.
 
 ### How Does Hashpool Help?
 

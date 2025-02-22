@@ -70,6 +70,8 @@ Anyone in the world can use a blockchain explorer and trace the flow of money. O
 
 Ecash, on the other hand, slides the slider all the way away from trustlessness to privacy. In the near future, mints will be fully verifiable using a protocol called Proof of Liabilities (currently under development). Thanks to the cryptographic magic of blind signatures, ecash has theoretically perfect privacy.
 
+![dream-team](https://github.com/user-attachments/assets/1c560458-9179-4afc-a175-934cc560acf0)
+
 In practice, users can freely swap value between ecash and bitcoin, leveraging the strengths of each system and minimizing their weaknesses. This is what makes ecash such a fantastic complement to bitcoin and why it is experiencing a rennaissance today. Together, ecash and bitcoin are the dream team.
 
 #### Better Custodians

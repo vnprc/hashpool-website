@@ -1,6 +1,6 @@
 {% if page.toc %}
 {% set expand_toc = page.extra.toc_open | default(value=config.extra.papermod.default_toc_open) %}
-<div class="toc">
+<div class="toc" style="margin-top: 1em;">
     <details {% if expand_toc == true %} open{% endif %}>
         <summary accesskey="c" title="(Alt + C)">
             <span class="details">Table of Contents</span>

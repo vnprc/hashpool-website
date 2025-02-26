@@ -2,9 +2,10 @@
 title = "What is Hashpool?"
 slug = "what-is-hashpool"
 template = "article.html"
-+++
-
+description = """
 Hashpool is an accountless mining pool that uses ecash to represent mining shares. Unlike existing mining pools, Hashpool cryptographically blinds the user's identity and creates a free market for trading mining shares.
+"""
++++
 
 ### The Problem With Mining Pools
 

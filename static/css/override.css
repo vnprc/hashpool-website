@@ -36,3 +36,6 @@
 .dark #searchbox input {
     background-color: var(--tertiary);
 }
+.single-article article > .container > h1 {
+    margin-bottom: 16px;
+}

@@ -9,7 +9,7 @@
     {% block header %}
     {% include "partials/header.html" %}
     {% endblock %}
-    <main class="main">
+    <main class="main single-article">
         {% block main %}
         {% if section %}
         <!-- This is a section -->
@@ -30,10 +30,13 @@
         <article>
             <div class="container">
                 <h1>{{ page.title }}</h1>
+                <div class="post-content">
+                    {{ page.description }}
+                </div>
+
                 {% if config.extra.papermod.show_toc | default(value=true) %}
                 {% include "partials/toc.html" %}
                 {% endif %}
-                <p>{{ page.description }}</p>
                 <div class="post-content">
                     {{ page.content | safe }}
                 </div>

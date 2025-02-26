@@ -32,6 +32,8 @@ An ecash token is a bearer asset issued by a custodian, called a mint. Mints are
 
 The secret sauce that makes ecash work is a cryptographic technique called blind signing. Blind signatures work kind of like carbon paper. If you put a piece of carbon paper in between two other pieces of paper, anything you write on the top sheet will be transferred automatically to the bottom sheet. Imagine writing a letter, putting it underneath a piece of carbon paper, and putting them both inside a sealed envelope . Now take that envelope to the bank and get a bank official to sign it without looking inside. When you open the envelope and remove the letter it will have a valid signature from a bank official but the bank has no idea what the letter says. They blindly signed the message.
 
+![how-to-mint-ecash](https://github.com/user-attachments/assets/fa9ad992-9220-42b1-bb65-3626f85079b3)
+
 Ecash tokens work by having the mint blind sign a secret only after a user deposits some asset. The user then privately unblinds the secret and the signature. Thanks the magic of cryptography, the unblinded signature can be verified by anyone who knows the mint's public key. The combination of unblinded secret and unblinded signature is called an ecash token. Just like physical cash, ecash can be freely traded without the mint knowing the identity of it's users.
 
 #### Privacy

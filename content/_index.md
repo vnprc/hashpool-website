@@ -1,3 +1,3 @@
 +++
-template = "home.html"
+redirect_to = "/articles/what-is-hashpool/"
 +++

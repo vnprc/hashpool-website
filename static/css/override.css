@@ -39,3 +39,16 @@
 .single-article article > .container > h1 {
     margin-bottom: 16px;
 }
+
+.light-only {
+  display: block;
+}
+.dark-only {
+  display: none;
+}
+.dark .light-only {
+  display: none;
+}
+.dark .dark-only {
+  display: block;
+}

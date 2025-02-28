@@ -91,8 +91,6 @@ In practice, users can freely swap value between ecash and bitcoin, leveraging t
 
 #### Better Custodians
 
-An ecash mint is the best kind of custodian: a private accountless custodian. This is a huge improvement over account-based custodians because it means a mint cannot selectively refuse service, it can only rug everyone or rug noone.
+An ecash mint is the best kind of custodian: a private accountless custodian. This is a huge improvement over account-based custodians because it means a mint cannot selectively refuse service. All mining pools are custodial in nature. Hashpool will enable pools to be the best kind of custodian: private and verifiable custodians.
 
-All mining pools are custodial in nature. Hashpool will bring mining up to modern standards by making pools into the best kinds of custodian: private and verifiable custodians.
-
-Hashpool is still in early development and we're looking for help! If you would like to contribute please get in contact. https://hashpool.dev
+Hashpool is still in early development and we're looking for help! If you would like to contribute please get in contact!

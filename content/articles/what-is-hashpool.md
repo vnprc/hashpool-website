@@ -77,7 +77,7 @@ I like to map out digital currencies in terms of three properties: trustlessness
 
 Anyone in the world can use a blockchain explorer and trace the flow of money. Once the owner of a bitcoin address is doxxed its entire transaction history and future can be monitored unless the owner takes active measures to regain their privacy such as coinjoins, coin swaps, or other privacy techniques. This was the tradeoff made by Satoshi Nakamoto that makes bitcoin possible.
 
-Ecash, on the other hand, slides the slider all the way away from trustlessness to privacy. In the near future, mints will be fully verifiable using a protocol called Proof of Liabilities (currently under development). Thanks to the cryptographic magic of blind signatures, ecash has theoretically perfect privacy.
+Ecash, on the other hand, slides the slider all the way away from trustlessness to privacy. Cypherpunks are working to make mints fully verifiable using a protocol called Proof of Liabilities (currently under development). Thanks to the cryptographic magic of blind signatures, ecash has theoretically perfect privacy. Unlike bitcoin, ecash has no transaction graph so even the mint cannot correlate payments between users.
 
 <div class="light-only">
   <img src="/images/what-is-hashpool/dream-team.png" alt="dream-team">
@@ -91,6 +91,6 @@ In practice, users can freely swap value between ecash and bitcoin, leveraging t
 
 #### Better Custodians
 
-An ecash mint is the best kind of custodian: a private accountless custodian. This is a huge improvement over account-based custodians because it means a mint cannot selectively refuse service. All mining pools are custodial in nature. Hashpool will enable pools to be the best kind of custodian: private and verifiable custodians.
+An ecash mint is the best kind of custodian: a private accountless custodian. This is a huge improvement over account-based custodians because it means a mint cannot selectively refuse service. All mining pools are custodial in nature. Hashpool will enable pools to be the best kind of custodian: a private and verifiable custodian.
 
 Hashpool is still in early development and we're looking for help! If you would like to contribute please get in contact!

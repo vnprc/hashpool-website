@@ -34,11 +34,11 @@ An ecash token is a bearer asset issued by a custodian, called a mint. Mints are
 The secret sauce that makes ecash work is a cryptographic technique called blind signing. Blind signatures work kind of like carbon paper. If you put a piece of carbon paper in between two other pieces of paper, anything you write on the top sheet will be transferred automatically to the bottom sheet. Imagine writing a letter, putting it underneath a piece of carbon paper, and putting them both inside a sealed envelope . Now take that envelope to the bank and get a bank official to sign it without looking inside. When you open the envelope and remove the letter it will have a valid signature from a bank official but the bank has no idea what the letter says. They blindly signed the message.
 
 <div class="light-only">
-  <img src="/static/images/what-is-hashpool/how-to-mint-ecash.png" alt="how-to-mint-ecash">
+  <img src="/images/what-is-hashpool/how-to-mint-ecash.png" alt="how-to-mint-ecash">
 </div>
 
 <div class="dark-only">
-  <img src="/static/images/what-is-hashpool/how-to-mint-ecash-inverted.png" alt="how-to-mint-ecash-inverted">
+  <img src="/images/what-is-hashpool/how-to-mint-ecash-inverted.png" alt="how-to-mint-ecash-inverted">
 </div>
 
 Ecash tokens work by having the mint blind sign a secret only after a user deposits some asset. The user then privately unblinds the secret and the signature. Thanks the magic of cryptography, the unblinded signature can be verified by anyone who knows the mint's public key. The combination of unblinded secret and unblinded signature is called an ecash token. Just like physical cash, ecash can be freely traded without the mint knowing the identity of it's users.
@@ -80,11 +80,11 @@ Anyone in the world can use a blockchain explorer and trace the flow of money. O
 Ecash, on the other hand, slides the slider all the way away from trustlessness to privacy. Cypherpunks are working to make mints fully verifiable using a protocol called Proof of Liabilities (currently under development). Thanks to the cryptographic magic of blind signatures, ecash has theoretically perfect privacy. Unlike bitcoin, ecash has no transaction graph so even the mint cannot correlate payments between users.
 
 <div class="light-only">
-  <img src="/static/images/what-is-hashpool/dream-team.png" alt="dream-team">
+  <img src="/images/what-is-hashpool/dream-team.png" alt="dream-team">
 </div>
 
 <div class="dark-only">
-  <img src="/static/images/what-is-hashpool/dream-team-inverted.png" alt="dream-team-inverted">
+  <img src="/images/what-is-hashpool/dream-team-inverted.png" alt="dream-team-inverted">
 </div>
 
 In practice, users can freely swap value between ecash and bitcoin, leveraging the strengths of each system and minimizing their weaknesses. This is what makes ecash such a fantastic complement to bitcoin and why it is experiencing a rennaissance today. Together, ecash and bitcoin are the dream team.

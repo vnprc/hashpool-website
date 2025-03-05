@@ -41,17 +41,11 @@ function initSearch() {
     }
   };
   var currentTerm = "";
+  var index;
   
-  // Use Zola’s get_url() to ensure correct path no matter base_url or subfolder:
-  var indexUrl = "{{ get_url(path='search_index.en.json') }}";
-  var index = fetch(indexUrl) 
-    .then(async function(response) {
-      return await elasticlunr.Index.load(await response.json());
-    });
-
-   var initIndex = async function () {
+  var initIndex = async function () {
     if (index === undefined) {
-      index = fetch("./search_index.en.json") // Make sure the path to your search index is correct
+      index = fetch("/search_index.en.json") // Make sure the path to your search index is correct
         .then(
           async function(response) {
             return await elasticlunr.Index.load(await response.json());

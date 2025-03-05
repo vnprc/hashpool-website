@@ -1,6 +1,6 @@
 author = "vnprc"
 title = "Hashpool"
-base_url = "https://vnprc.github.io/hashpool-website/"
+base_url = "https://hashpool.dev"
 compile_sass = true
 build_search_index = true 
 generate_feeds = true

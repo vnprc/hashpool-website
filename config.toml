@@ -34,6 +34,7 @@ index_format = "elasticlunr_json"
 highlight_code = true
 
 [extra]
+copyright_url = "https://github.com/vnprc"
 
 [extra.papermod]
 title = "Hashpool"

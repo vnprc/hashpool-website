@@ -87,7 +87,7 @@ Ecash, on the other hand, slides the slider all the way away from trustlessness 
   <img src="../../images/what-is-hashpool/dream-team-inverted.png" alt="dream-team-inverted">
 </div>
 
-In practice, users can freely swap value between ecash and bitcoin, leveraging the strengths of each system and minimizing their weaknesses. This is what makes ecash such a fantastic complement to bitcoin and why it is experiencing a rennaissance today. Together, ecash and bitcoin are the dream team.
+In practice, users can freely swap value between ecash and bitcoin, leveraging the strengths of each system and minimizing their weaknesses. This is what makes ecash such a fantastic complement to bitcoin and why it is experiencing a renaissance today. Together, ecash and bitcoin are the dream team.
 
 ### Better Custodians
 

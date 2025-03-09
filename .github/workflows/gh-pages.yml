@@ -1,0 +1,34 @@
+name: Build & Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Check out your repository
+        uses: actions/checkout@v3
+
+      - name: Install Zola
+        run: |
+          # Download latest release; you can pin a specific version if you prefer
+          curl -s https://getzola.sh | bash
+
+      - name: Build site
+        run: |
+          ./zola build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          publish_branch: gh-pages
+          allow_empty_commit: false
+

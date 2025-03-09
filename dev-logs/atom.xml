@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title>Hashpool - Development Logs</title>
-    <link rel="self" type="application/atom+xml" href="https://vnprc.github.io/hashpool-website/dev-logs/atom.xml"/>
-    <link rel="alternate" type="text/html" href="https://vnprc.github.io/hashpool-website/dev-logs/"/>
+    <link rel="self" type="application/atom+xml" href="https://hashpool.dev/dev-logs/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://hashpool.dev/dev-logs/"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
     <updated>2025-03-03T00:00:00+00:00</updated>
-    <id>https://vnprc.github.io/hashpool-website/dev-logs/atom.xml</id>
+    <id>https://hashpool.dev/dev-logs/atom.xml</id>
     <entry xml:lang="en">
         <title>NEMS, Website, and Issue Tracking</title>
         <published>2025-03-03T00:00:00+00:00</published>
@@ -19,10 +19,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://vnprc.github.io/hashpool-website/dev-logs/dev-log-2025-03-03/"/>
-        <id>https://vnprc.github.io/hashpool-website/dev-logs/dev-log-2025-03-03/</id>
+        <link rel="alternate" type="text/html" href="https://hashpool.dev/dev-logs/dev-log-2025-03-03/"/>
+        <id>https://hashpool.dev/dev-logs/dev-log-2025-03-03/</id>
         
-        <content type="html" xml:base="https://vnprc.github.io/hashpool-website/dev-logs/dev-log-2025-03-03/">&lt;h2 id=&quot;socratic-of-hard-knocks&quot;&gt;Socratic of Hard Knocks&lt;&#x2F;h2&gt;
+        <content type="html" xml:base="https://hashpool.dev/dev-logs/dev-log-2025-03-03/">&lt;h2 id=&quot;socratic-of-hard-knocks&quot;&gt;Socratic of Hard Knocks&lt;&#x2F;h2&gt;
 &lt;p&gt;I was invited to attend the Nashville Energy and Mining Summit (NEMS) at Bitcoin Park Jan 30th and 31st. This would be a great opportunity to talk with miners to spread the word and get feedback on my project.&lt;&#x2F;p&gt;
 &lt;p&gt;The day before the conference I presented my project at BitDevs. It went horribly. I was planning to demo my project live but of course the demonstration gods picked that exact time to smite me with a build error. It totally threw me off my game. I tried to fumble through an explanation and troubleshoot the build error at the same time and ended up failing at both.&lt;&#x2F;p&gt;
 &lt;p&gt;It wasn&#x27;t a total loss. The audience was genuinely interested in the project and had good questions. I did manage to explain a few concepts, just not very well and not in a way that told a story. Instead it was kind of a jumble of ideas. The rest of the socratic seminar went great and I was able to contribute to the discussion.&lt;&#x2F;p&gt;
@@ -70,10 +70,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://vnprc.github.io/hashpool-website/dev-logs/dev-log-2025-01-27/"/>
-        <id>https://vnprc.github.io/hashpool-website/dev-logs/dev-log-2025-01-27/</id>
+        <link rel="alternate" type="text/html" href="https://hashpool.dev/dev-logs/dev-log-2025-01-27/"/>
+        <id>https://hashpool.dev/dev-logs/dev-log-2025-01-27/</id>
         
-        <content type="html" xml:base="https://vnprc.github.io/hashpool-website/dev-logs/dev-log-2025-01-27/">&lt;h2 id=&quot;website&quot;&gt;Website&lt;&#x2F;h2&gt;
+        <content type="html" xml:base="https://hashpool.dev/dev-logs/dev-log-2025-01-27/">&lt;h2 id=&quot;website&quot;&gt;Website&lt;&#x2F;h2&gt;
 &lt;p&gt;I&#x27;ve made a lot of progress on hashpool in the last month. Over the holidays I worked on a website repository. I have a little experience hosting a website thanks to my BitDevs chapter but I knew I needed a more modern framework. My BitDevs site uses jekyll, which is not well supported anymore. I knew a lot of other BitDevs chapters were upgrading to Zola from the original jekyll repo so I went looking for a nice Zola theme to start with.&lt;&#x2F;p&gt;
 &lt;p&gt;I found a cool looking theme called PaperMod and got to work importing all my dev logs there. This was a relatively easy task which was great for continuing my green box streak while keeping my work load low during the holidays.&lt;&#x2F;p&gt;
 &lt;p&gt;Once I finished with the dev logs I turned my attention to molding the site layout to my needs. This was a much more difficult proposition given my unfamiliarity with the tools and concepts of web design. But I powered through my skill issues to get it in reasonable shape. I even managed to fix a display bug and upstream it. Nice!&lt;&#x2F;p&gt;
@@ -126,10 +126,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://vnprc.github.io/hashpool-website/dev-logs/dev-log-2024-12-24/"/>
-        <id>https://vnprc.github.io/hashpool-website/dev-logs/dev-log-2024-12-24/</id>
+        <link rel="alternate" type="text/html" href="https://hashpool.dev/dev-logs/dev-log-2024-12-24/"/>
+        <id>https://hashpool.dev/dev-logs/dev-log-2024-12-24/</id>
         
-        <content type="html" xml:base="https://vnprc.github.io/hashpool-website/dev-logs/dev-log-2024-12-24/">&lt;p&gt;I have spent the past few weeks cleaning up the hashpool codebase. In the process of sprinting towards ecash proofs I basically extracted only the pieces I needed into the SRI codebase. This is a messy arrangement. I hate working in a messy environment, it puts a drag on everything you try to build. Before I start working toward redemptions I want to clean up issuance as much as possible. This means putting the pieces back into the cashu wallet in a way that makes sense for my usecase. When I have the wallet working the way I want I will open a PR to cdk. I&#x27;m still a ways off, though.&lt;&#x2F;p&gt;
+        <content type="html" xml:base="https://hashpool.dev/dev-logs/dev-log-2024-12-24/">&lt;p&gt;I have spent the past few weeks cleaning up the hashpool codebase. In the process of sprinting towards ecash proofs I basically extracted only the pieces I needed into the SRI codebase. This is a messy arrangement. I hate working in a messy environment, it puts a drag on everything you try to build. Before I start working toward redemptions I want to clean up issuance as much as possible. This means putting the pieces back into the cashu wallet in a way that makes sense for my usecase. When I have the wallet working the way I want I will open a PR to cdk. I&#x27;m still a ways off, though.&lt;&#x2F;p&gt;
 &lt;p&gt;I added wallet functions to perform a bunch of tasks without making any network calls. This included:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;add and retrieve keysets&lt;&#x2F;li&gt;
@@ -189,10 +189,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://vnprc.github.io/hashpool-website/dev-logs/dev-log-2024-12-08/"/>
-        <id>https://vnprc.github.io/hashpool-website/dev-logs/dev-log-2024-12-08/</id>
+        <link rel="alternate" type="text/html" href="https://hashpool.dev/dev-logs/dev-log-2024-12-08/"/>
+        <id>https://hashpool.dev/dev-logs/dev-log-2024-12-08/</id>
         
-        <content type="html" xml:base="https://vnprc.github.io/hashpool-website/dev-logs/dev-log-2024-12-08/">&lt;p&gt;I hit my first milestone this week. I have successfully generated proofs in the translator proxy. To phrase it summarily: I can now generate ecash tokens in exchange for proof of work mining shares. LET&#x27;S GO BABY! \o&#x2F;&lt;&#x2F;p&gt;
+        <content type="html" xml:base="https://hashpool.dev/dev-logs/dev-log-2024-12-08/">&lt;p&gt;I hit my first milestone this week. I have successfully generated proofs in the translator proxy. To phrase it summarily: I can now generate ecash tokens in exchange for proof of work mining shares. LET&#x27;S GO BABY! \o&#x2F;&lt;&#x2F;p&gt;
 &lt;p&gt;I took a screenshot and &lt;a href=&quot;https:&#x2F;&#x2F;njump.me&#x2F;nevent1qvzqqqqqqypzp5c99j3784frk8kgqec7kxa6q5t69afzux2h0rwg8hgr4rvy59cwqy2hwumn8ghj7erfw36x7tnsw43z7un9d3shjqpqfpzmnrmcr02ua3kpsvy93l95cfgk7yuaj5zmvadjtd7n4ehcegls0528lx&quot;&gt;posted it to nostr&lt;&#x2F;a&gt;. Calle went nuts resharing on nostr and twitter, driving a lot of attention to my project.&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;github.com&#x2F;user-attachments&#x2F;assets&#x2F;65f11e91-6224-4c3a-be3a-73c158a44079&quot; alt=&quot;excellent&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;I spent a lot of time trying to get variable length encoding working in order to send an entire keyset through SRI message transport. After trying a bunch of things without success I listened to reason (read: I listened to Gary) and pared the Sv2Keyset struct down to a single key. Once I removed the complexity of variable length data types it was fairly simple to get encoding to work using the existing encoding traits. I still need to revisit this but it doesn&#x27;t need to stand in the way of constructing proofs.&lt;&#x2F;p&gt;
@@ -221,10 +221,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://vnprc.github.io/hashpool-website/dev-logs/dev-log-2024-11-24/"/>
-        <id>https://vnprc.github.io/hashpool-website/dev-logs/dev-log-2024-11-24/</id>
+        <link rel="alternate" type="text/html" href="https://hashpool.dev/dev-logs/dev-log-2024-11-24/"/>
+        <id>https://hashpool.dev/dev-logs/dev-log-2024-11-24/</id>
         
-        <content type="html" xml:base="https://vnprc.github.io/hashpool-website/dev-logs/dev-log-2024-11-24/">&lt;p&gt;For the past 10 days I have focused on mainly three areas:&lt;&#x2F;p&gt;
+        <content type="html" xml:base="https://hashpool.dev/dev-logs/dev-log-2024-11-24/">&lt;p&gt;For the past 10 days I have focused on mainly three areas:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;updating my cdk branch&lt;&#x2F;li&gt;
 &lt;li&gt;continuing work on ecash issuance&lt;&#x2F;li&gt;
@@ -257,10 +257,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://vnprc.github.io/hashpool-website/dev-logs/dev-log-2024-11-14/"/>
-        <id>https://vnprc.github.io/hashpool-website/dev-logs/dev-log-2024-11-14/</id>
+        <link rel="alternate" type="text/html" href="https://hashpool.dev/dev-logs/dev-log-2024-11-14/"/>
+        <id>https://hashpool.dev/dev-logs/dev-log-2024-11-14/</id>
         
-        <content type="html" xml:base="https://vnprc.github.io/hashpool-website/dev-logs/dev-log-2024-11-14/">&lt;p&gt;TABconf was great! I spent the two workshop days hacking on hashpool with Gary. We don&#x27;t get to meet in person much, even though we live relatively close. We didn&#x27;t produce a code branch that compiles but Gary&#x27;s knowledge of Sv2 was very useful in navigating the codebase and understanding the flaws of my previous design. When I returned home and continued work I was able to reference the two branches we created at TAB to push forward. I was previously trying to send the keyset_id downstream to the proxy on the SetupConnection message, but this is a common message that is shared between many Sv2 roles which explains my issues with the job declarator. A better design is to include the keyset_id on the extended channel success message which does not involve the job declarator.&lt;&#x2F;p&gt;
+        <content type="html" xml:base="https://hashpool.dev/dev-logs/dev-log-2024-11-14/">&lt;p&gt;TABconf was great! I spent the two workshop days hacking on hashpool with Gary. We don&#x27;t get to meet in person much, even though we live relatively close. We didn&#x27;t produce a code branch that compiles but Gary&#x27;s knowledge of Sv2 was very useful in navigating the codebase and understanding the flaws of my previous design. When I returned home and continued work I was able to reference the two branches we created at TAB to push forward. I was previously trying to send the keyset_id downstream to the proxy on the SetupConnection message, but this is a common message that is shared between many Sv2 roles which explains my issues with the job declarator. A better design is to include the keyset_id on the extended channel success message which does not involve the job declarator.&lt;&#x2F;p&gt;
 &lt;p&gt;I gave my talk at 9am on the last day of the conference. Honestly, I was not feeling 100% so it was kind of low energy. I feel like I did a better job at btc++ so I&#x27;m glad it&#x27;s the one with a recording. After this I hosted the Lightning Socratic Seminar and sat on a Mining Socratic Panel which I feel went really well. All of my events were in the socratic village which doesn&#x27;t allow recordings.&lt;&#x2F;p&gt;
 &lt;p&gt;In the two weeks since then I have successully implemented passing the keyset_id downstream from the pool to the proxy. The proxy now uses the keyset_id to generate blinded secrets. Passing the blinded secret around is more complicated than the keyset_id. keyset_id can be represented as a u64, which is a primitive type. The blinded secret is composed of multiple types, including a cryptgraphic key. I implemented a Sv2BlindedMessage struct using Sv2&#x27;s custom data types to enable it to be serialized and sent back upstream. I had a hell of a time getting it to derive the Serialize and Deserialize trait for this struct. I think I was just pushing myself too hard under false time constraints. After a night of rest I was able to find out the problem. I needed to import Decodable and Encodable from both the binary_codec_sv2 and the derive_codec_sv2 crates. These traits are aliased to Serialize and Deserialize everywhere in the codebase. This confusing arrangement threw me for a loop. I should find out why it&#x27;s written this way.&lt;&#x2F;p&gt;
 &lt;p&gt;Another stumbling block I ran into was converting the 33 byte cdk pubkey (actually a secp256k1::PublicKey) into a 32 byte Sv2 PubKey. I just dropped the first byte that encodes the parity of the y coordinate on the elliptic curve and left a TODO comment to resolve later. Now that I think about it, I should probably just add a parity byte to the struct. I will work on this tomorrow.&lt;&#x2F;p&gt;
@@ -283,10 +283,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://vnprc.github.io/hashpool-website/dev-logs/dev-log-2024-10-22/"/>
-        <id>https://vnprc.github.io/hashpool-website/dev-logs/dev-log-2024-10-22/</id>
+        <link rel="alternate" type="text/html" href="https://hashpool.dev/dev-logs/dev-log-2024-10-22/"/>
+        <id>https://hashpool.dev/dev-logs/dev-log-2024-10-22/</id>
         
-        <content type="html" xml:base="https://vnprc.github.io/hashpool-website/dev-logs/dev-log-2024-10-22/">&lt;p&gt;I have not been making regular dev log updates due to personal and business travel, but I have not been idle. As Average Gary let me know, it&#x27;s time to get back up on the horse. Side note: shout out to Gary! You are like a boxing coach who keeps me going when my internal drive starts to flag. Thank you, brother. &amp;lt;3&lt;&#x2F;p&gt;
+        <content type="html" xml:base="https://hashpool.dev/dev-logs/dev-log-2024-10-22/">&lt;p&gt;I have not been making regular dev log updates due to personal and business travel, but I have not been idle. As Average Gary let me know, it&#x27;s time to get back up on the horse. Side note: shout out to Gary! You are like a boxing coach who keeps me going when my internal drive starts to flag. Thank you, brother. &amp;lt;3&lt;&#x2F;p&gt;
 &lt;p&gt;In the process of creating the presentation I delivered at btc++ I have uncovered significant gaps in my thinking. The biggest of these is my naive conception of PPLNS payouts. I was originally picturing what I now know is called proportional mining, where all shares are paid once each time a block is found. This is a bad idea for public pools because it leads to a behavior called pool hopping, which dramatically increases pool hashrate variability. It&#x27;s actually not terrible if you have a whitelist of miners. I may use this payout method for the passthrough construction if it makes sense to do so but I suspect that once I code up the payout calculations it will be simpler and easier not to reimplement payouts.&lt;&#x2F;p&gt;
 &lt;p&gt;There is a lack of quality educational material about pool payouts but I managed to find two good sources: a &lt;a href=&quot;https:&#x2F;&#x2F;bitcointalk.org&#x2F;index.php?topic=39832&quot;&gt;2011 bitcointalk thread&lt;&#x2F;a&gt; and a &lt;a href=&quot;https:&#x2F;&#x2F;mintpond.com&#x2F;b&#x2F;prop-vs-pplns-vs-pps-mining-pool-reward-systems&quot;&gt;MintPond blog post&lt;&#x2F;a&gt; (MintPond is apparently a zcoin mining pool). The second reply on bitcointalk basically describes the use case of ehash at a high level. This is great confirmation that I&#x27;m on the right track! All the best ideas have already been discussed 10 years ago on bitcointalk. :)&lt;&#x2F;p&gt;
 &lt;p&gt;With newfound understanding I rewrote the slide explaining how and why PPLNS works. I realized that I was barking up the wrong tree with an exponential decay function. I think that might work but it&#x27;s actually much simpler to use a linear decay function. All we need to do is amortize share payouts to prevent pool hopping and a linear decay makes the math much simpler to understand. I have found that having simplicity as an engineering goal produces far better results in the long run, so let&#x27;s keep it simple until we identify a need to make it complex.&lt;&#x2F;p&gt;
@@ -312,10 +312,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://vnprc.github.io/hashpool-website/dev-logs/dev-log-2024-09-22/"/>
-        <id>https://vnprc.github.io/hashpool-website/dev-logs/dev-log-2024-09-22/</id>
+        <link rel="alternate" type="text/html" href="https://hashpool.dev/dev-logs/dev-log-2024-09-22/"/>
+        <id>https://hashpool.dev/dev-logs/dev-log-2024-09-22/</id>
         
-        <content type="html" xml:base="https://vnprc.github.io/hashpool-website/dev-logs/dev-log-2024-09-22/">&lt;p&gt;This week I started making more involved changes to the stratum v2 repo to set up the necessary message passing infrastructure. Unsurprisingly, this is more time consuming than the work I have done in previous weeks. &lt;code&gt;keyset_id&lt;&#x2F;code&gt; message passing is not quite working yet so I did not complete any major milestones this week.&lt;&#x2F;p&gt;
+        <content type="html" xml:base="https://hashpool.dev/dev-logs/dev-log-2024-09-22/">&lt;p&gt;This week I started making more involved changes to the stratum v2 repo to set up the necessary message passing infrastructure. Unsurprisingly, this is more time consuming than the work I have done in previous weeks. &lt;code&gt;keyset_id&lt;&#x2F;code&gt; message passing is not quite working yet so I did not complete any major milestones this week.&lt;&#x2F;p&gt;
 &lt;p&gt;My strategy this far has been to generate blinded secrets at the appropriate place in the code using fake keyset data. In practice, the pool&#x2F;mint will need to generate the keyset and transmit the keyset_id to the proxy&#x2F;wallet before it can generate valid ecash tokens. I created two new message structs: SetupConnectionMint and SetupConnectionSuccessMint to carry this data.&lt;&#x2F;p&gt;
 &lt;p&gt;I have my doubts as to whether this is the right approach but by pursuing this strategy I expect to learn a lot about the stratum v2 design and what this means in terms of engineering trade-offs. I would like to spend some more time understanding how stratum extensions are built but I think I can punt on this for now. The end result will most likely be an extension rather than a fork but in my engineering career I have found it very useful to consider the first implementation of any system as a practice round. When trying to do something new and hard you always end up rewriting it anyway, so by embracing epehemerality early on you can focus more on discovering the right requirements and abstractions for your needs rather than the ideal design.&lt;&#x2F;p&gt;
 &lt;p&gt;I previously found that modifying the SetupConnection struct directly creates incompatibilities with bitcoind. Perhaps creating new messages can avoid this problem but it requires a lot of boilerplate code. In the process of building out the new message infrastructure I was surprised to find out that the jd client serves as a passthrough layer to establish a connection between the proxy and pool. I definitely should study the stratum protocol to better understand the topology of the various services.&lt;&#x2F;p&gt;
@@ -339,10 +339,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://vnprc.github.io/hashpool-website/dev-logs/dev-log-2024-09-15/"/>
-        <id>https://vnprc.github.io/hashpool-website/dev-logs/dev-log-2024-09-15/</id>
+        <link rel="alternate" type="text/html" href="https://hashpool.dev/dev-logs/dev-log-2024-09-15/"/>
+        <id>https://hashpool.dev/dev-logs/dev-log-2024-09-15/</id>
         
-        <content type="html" xml:base="https://vnprc.github.io/hashpool-website/dev-logs/dev-log-2024-09-15/">&lt;p&gt;I made good progress this week:&lt;&#x2F;p&gt;
+        <content type="html" xml:base="https://hashpool.dev/dev-logs/dev-log-2024-09-15/">&lt;p&gt;I made good progress this week:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;switched from the hosted template provider to running my own full stack
 &lt;ul&gt;
@@ -397,10 +397,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://vnprc.github.io/hashpool-website/dev-logs/dev-log-2024-09-08/"/>
-        <id>https://vnprc.github.io/hashpool-website/dev-logs/dev-log-2024-09-08/</id>
+        <link rel="alternate" type="text/html" href="https://hashpool.dev/dev-logs/dev-log-2024-09-08/"/>
+        <id>https://hashpool.dev/dev-logs/dev-log-2024-09-08/</id>
         
-        <content type="html" xml:base="https://vnprc.github.io/hashpool-website/dev-logs/dev-log-2024-09-08/">&lt;p&gt;This week I had three wins:&lt;&#x2F;p&gt;
+        <content type="html" xml:base="https://hashpool.dev/dev-logs/dev-log-2024-09-08/">&lt;p&gt;This week I had three wins:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;began generating blinded secrets upon share submission&lt;&#x2F;li&gt;
 &lt;li&gt;ported my work from the benchmarking tool to the real Sv2 project&lt;&#x2F;li&gt;
@@ -453,10 +453,10 @@ but this is a dependency I need to remove for a successful demo.&lt;&#x2F;li&gt;
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://vnprc.github.io/hashpool-website/dev-logs/dev-log-2024-08-30/"/>
-        <id>https://vnprc.github.io/hashpool-website/dev-logs/dev-log-2024-08-30/</id>
+        <link rel="alternate" type="text/html" href="https://hashpool.dev/dev-logs/dev-log-2024-08-30/"/>
+        <id>https://hashpool.dev/dev-logs/dev-log-2024-08-30/</id>
         
-        <content type="html" xml:base="https://vnprc.github.io/hashpool-website/dev-logs/dev-log-2024-08-30/">&lt;p&gt;Gary suggested I create a log of my dev work and share it with y&#x27;all to help ensure I&#x27;m making progress and identify problems or suboptimal decisions early on. Great idea, Gary!&lt;&#x2F;p&gt;
+        <content type="html" xml:base="https://hashpool.dev/dev-logs/dev-log-2024-08-30/">&lt;p&gt;Gary suggested I create a log of my dev work and share it with y&#x27;all to help ensure I&#x27;m making progress and identify problems or suboptimal decisions early on. Great idea, Gary!&lt;&#x2F;p&gt;
 &lt;p&gt;My initial development goal is to hack up a demo project with a mining pool and cashu mint that can generate an ecash token for each mining share submitted. I want something to show off at TABConf to help people grok the concept behind hashpool. It would be so sick if I could generate testnet eHash tokens and give them away at the conference. 🤙&lt;&#x2F;p&gt;
 &lt;p&gt;The architecture is pretty simple at this stage:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;           miner                    mining pool

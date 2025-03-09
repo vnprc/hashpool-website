@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 Allow: /
-Sitemap: https://vnprc.github.io/hashpool-website/sitemap.xml
+Sitemap: https://hashpool.dev/sitemap.xml

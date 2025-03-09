@@ -9,25 +9,26 @@ jobs:
   build-deploy:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+      contents: write  # So GITHUB_TOKEN can push to gh-pages
 
     steps:
-      - name: Check out your repository
+      - name: Check out repository
         uses: actions/checkout@v3
 
       - name: Install Zola
         run: |
-          # Download latest release; you can pin a specific version if you prefer
-          curl -s https://getzola.sh | bash
+          ZOLA_VERSION="v0.19.2"
+          curl -sSL "https://github.com/getzola/zola/releases/download/$ZOLA_VERSION/zola-$ZOLA_VERSION-x86_64-unknown-linux-gnu.tar.gz" -o zola.tar.gz
+          tar -xzf zola.tar.gz
+          sudo mv zola /usr/local/bin/zola
 
       - name: Build site
-        run: |
-          ./zola build
+        run: zola build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          personal_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
           publish_branch: gh-pages
           allow_empty_commit: false

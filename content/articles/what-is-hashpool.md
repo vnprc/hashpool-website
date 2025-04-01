@@ -51,7 +51,7 @@ Hashpool is being built for small pool operators. By default, it won't require u
 
 ### Minimum Withdrawal Threshold
 
-Because ecash is so darn efficient it doesn't have a minimum payment threshold. You can send a single satoshi to a brand new wallet just as easily as you can send a million sats. As long as the hashpool instance supports ecash payouts, there is no onboarding fee. This means that hashpools can efficiently serve even the smallest miners. BitAxe fans rejoice!
+Because ecash is so darn efficient it doesn't have a minimum payment threshold. You can send a single satoshi to a brand new wallet just as easily as you can send a million sats. As long as the hashpool instance supports ecash payouts, there is no onboarding fee. This means that hashpools can efficiently serve even the smallest miners. Bitaxe fans rejoice!
 
 ### eHash
 

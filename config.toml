@@ -57,6 +57,7 @@ date_format = "%Y-%m-%d"
 navigation = [
     { url = "$BASE_URL", title = "About" },
     { url = "$BASE_URL/dev-logs", title = "Development Logs" },
+    { url = "$BASE_URL/diagrams", title = "Diagrams" },
     { url = "$BASE_URL/search", title = "Search" },
     { url = "https://github.com/vnprc/hashpool", title = "Github" },
 ]

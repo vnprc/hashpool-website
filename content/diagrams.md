@@ -1,6 +1,7 @@
 +++
 title = "Engineering Diagrams"
 template = "page.html"
+extra = { show_breadcrumbs = false }
 +++
 
 <div class="diagrams-grid">

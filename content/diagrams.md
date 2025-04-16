@@ -50,7 +50,6 @@ template = "page.html"
   <a href="/images/diagrams/proxy-ehash-issuance-v1.svg">
     <img src="/images/diagrams/thumbs/proxy-ehash-issuance-v1-thumb.jpg" alt="proxy eHash issuance v0.1" class="diagram-thumb diagram-link" />
   </a>
-  <p class="diagram-desc">eHash issuance in Hashpool v0.1 proxy configuration</p>
 </div>
 
 <div class="diagram-entry">
@@ -58,7 +57,6 @@ template = "page.html"
   <a href="/images/diagrams/ehash-redemption-v1.svg">
     <img src="/images/diagrams/thumbs/ehash-redemption-v1-thumb.jpg" alt="eHash redemption v0.1" class="diagram-thumb diagram-link" />
   </a>
-  <p class="diagram-desc">eHash redemption in Hashpool v0.1</p>
 </div>
 
 <div class="diagram-entry">
@@ -66,7 +64,6 @@ template = "page.html"
   <a href="/images/diagrams/proxy-ehash-redemption-v1.svg">
     <img src="/images/diagrams/thumbs/proxy-ehash-redemption-v1-thumb.jpg" alt="proxy eHash redemption v0.1" class="diagram-thumb diagram-link" />
   </a>
-  <p class="diagram-desc">eHash redemption in Hashpool v0.1 proxy configuration</p>
 </div>
 
 <div class="diagram-entry">

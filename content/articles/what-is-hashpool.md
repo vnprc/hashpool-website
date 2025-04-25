@@ -61,7 +61,7 @@ Mining shares are a precursor to bitcoin, they are a necessary ingredient in the
 
 Ehash takes time to mature and accrue bitcoin value. For a limited time after the token is issued, it gains value with each bitcoin block found by the mining pool. Once this time window expires the eHash token will stop accruing value and can be redeemed for bitcoin, either directly via lightning or an on-chain transaction, or indirectly using ecash.
 
-Ehash can be freely traded but it's value is not fixed. Each token represents a claim for some asset to be delivered in the future. This makes eHash a futures instrument. Mining futures are very useful for two reasons: they enable miners to hedge their risk by selling their hashrate before it fully matures, and they allow purchasers to buy bitcoin at a discount in exchange for assuming some risk.
+Ehash can be freely traded but its value is not fixed. Each token represents a claim for some asset to be delivered in the future. This makes eHash a futures instrument. Mining futures are very useful for two reasons: they enable miners to hedge their risk by selling their hashrate before it fully matures, and they allow purchasers to buy bitcoin at a discount in exchange for assuming some risk.
 
 In many countries around the world, futures markets are not accessible to the average person. With hashpool, anyone anywhere can access bitcoin block reward futures at any scale of operation. Thanks to the efficiency and privacy properties of ecash, these futures instruments will be extremely liquid and free (as in speech). Let's go, baby! 🚀
 

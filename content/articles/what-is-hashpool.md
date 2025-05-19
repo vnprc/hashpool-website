@@ -15,7 +15,7 @@ In the earliest days of bitcoin anyone could mine on a laptop by running the bit
 
 All mining pools have a minimum withdrawal threshold, which means that if you want to start with the smallest ASIC available it can take years or decades of hashing before you are able to withdraw your earnings on-chain.
 
-Some pools offer lower thresholds for lightning withdrawals, but lightning comes with it's own challenges. If you use a custodial lightning wallet you give up all transaction privacy and your funds are always at risk of being rugged, or stolen by the custodian.
+Some pools offer lower thresholds for lightning withdrawals, but lightning comes with its own challenges. If you use a custodial lightning wallet you give up all transaction privacy and your funds are always at risk of being rugged, or stolen by the custodian.
 
 If you decide to use a self-custodial wallet you can eliminate the rug risk but you pay for it with technical complexity. You need to open a lightning channel before you can use your wallet, which requires an on-chain fee. If you don't already have some bitcoin you'll need to buy a channel from another lightning node. This amounts to an onboarding fee, which is not a good experience for new users wanting to start small.
 
@@ -41,11 +41,11 @@ The secret sauce that makes ecash work is a cryptographic technique called blind
   <img src="../../images/what-is-hashpool/how-to-mint-ecash-inverted.png" alt="how-to-mint-ecash-inverted">
 </div>
 
-Ecash tokens work by having the mint blind sign a secret only after a user deposits some asset. The user then privately unblinds the secret and the signature. Thanks the magic of cryptography, the unblinded signature can be verified by anyone who knows the mint's public key. The combination of unblinded secret and unblinded signature is called an ecash token. Just like physical cash, ecash can be freely traded without the mint knowing the identity of it's users.
+Ecash tokens work by having the mint blind sign a secret only after a user deposits some asset. The user then privately unblinds the secret and the signature. Thanks the magic of cryptography, the unblinded signature can be verified by anyone who knows the mint's public key. The combination of unblinded secret and unblinded signature is called an ecash token. Just like physical cash, ecash can be freely traded without the mint knowing the identity of its users.
 
 ### Privacy
 
-Hashpool uses ecash to enable an accountless mining pool. Instead of the pool keeping track of the balance of every user account within it's database, a hashpool issues ecash tokens for each mining share and only keeps track of how many tokens are outstanding. This means it doesn't need to know or care who is mining and who is redeeming mining rewards.
+Hashpool uses ecash to enable an accountless mining pool. Instead of the pool keeping track of the balance of every user account within its database, a hashpool issues ecash tokens for each mining share and only keeps track of how many tokens are outstanding. This means it doesn't need to know or care who is mining and who is redeeming mining rewards.
 
 Hashpool is being built for small pool operators. By default, it won't require users to sign up or submit KYC information. But it's up to the operator whether to authenticate users. Anyone can mine anonymously as long as there is at least one anonymous hashpool instance somewhere in the world. How cool is that?
 

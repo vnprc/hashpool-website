@@ -4,8 +4,50 @@
     <link rel="self" type="application/atom+xml" href="https://hashpool.dev/dev-logs/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://hashpool.dev/dev-logs/"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2025-04-05T00:00:00+00:00</updated>
+    <updated>2025-05-23T00:00:00+00:00</updated>
     <id>https://hashpool.dev/dev-logs/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Conferences, Coinbases, and Contributors</title>
+        <published>2025-05-23T00:00:00+00:00</published>
+        <updated>2025-05-23T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              vnprc
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://hashpool.dev/dev-logs/dev-log-2025-05-23/"/>
+        <id>https://hashpool.dev/dev-logs/dev-log-2025-05-23/</id>
+        
+        <content type="html" xml:base="https://hashpool.dev/dev-logs/dev-log-2025-05-23/">&lt;p&gt;Wow, I just read that last dev log and it almost put me to sleep. Let&#x27;s keep this one short and sweet.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;op-next&quot;&gt;OP_NEXT&lt;&#x2F;h2&gt;
+&lt;p&gt;I attended OP_NEXT in DC. This conference is focused on forking upgrades to the bitcoin protocol. The conference topic is not directly related to my work (at least it wasn&#x27;t at the time), but soft forks are a topic I&#x27;m very interested in and a 45 minute flight made this conference too good to pass up.&lt;&#x2F;p&gt;
+&lt;p&gt;I talked a bit about Hashpool at the DC BitDevs right before the conference. It was great to catch up with friends and meet new people. I shilled my project around and ecash-pilled some folks. I feel like at least half of my job is just ground game. Getting to know people, spreading the word about my project, and introducing folks to the concepts.&lt;&#x2F;p&gt;
+&lt;p&gt;Before the conference I was confident that CTV would be the next soft fork. After the conference I was much more confident. I think rough consensus is forming around CTV+CSFS and many of the folks working at the core of this issue seemed to think so as well. Bullish on CTV. 🐂🥪&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;ehash&quot;&gt;eHash&lt;&#x2F;h2&gt;
+&lt;p&gt;There were a couple weeks between OP_NEXT and btc++ so I sprinted to get eHash minting working in Hashpool. I won&#x27;t bore you with all the minor details but I finished major development of the quote system and got eHash tokens printing in the proxy logs.&lt;&#x2F;p&gt;
+&lt;p&gt;I used redis as a hack to simulate two http APIs: retrieving the keyset and the quote ID from the mint. This works for demo purposes but doesn&#x27;t represent a real world architecture. Redis will be a privileged service on the pool&#x27;s local network along with the pool role and the mint role so the proxy will not be able to access it from the miner&#x27;s local network. This will be one of the first things I fix when I resume development shortly.&lt;&#x2F;p&gt;
+&lt;p&gt;Gary and I also collaborated to get the build working on mac again. Noice!&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;tems-and-btc-mempool-edition&quot;&gt;TEMS and btc++ Mempool Edition&lt;&#x2F;h2&gt;
+&lt;p&gt;I attended the first day of the Texas Energy and Mining Summit. I sat on a panel discussing pool payout methods and got to spend some time with the business side of the mining industry. This conference overlapped one day with btc++ so I only attended the first day.&lt;&#x2F;p&gt;
+&lt;p&gt;I spent a significant amount of time preparing for my btc++ talk. I have been thinking a lot about the best way to architect a mining pool stack to optimize for sovereignty, privacy, and resilience. My btc++ talk was a nice summary of my thinking along with a few protocol ideas I have been toying with. You can watch my talk and Gary&#x27;s immediately after it &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?app=desktop&amp;amp;v=F2p_V0svDTo&amp;amp;t=3h15m30s&quot;&gt;here&lt;&#x2F;a&gt;. I didn&#x27;t have quite as much time as I wanted to rehearse so I fumbled the Spillman Channel explanation but otherwise I think it went off really well. The crowd was small but very supportive.&lt;&#x2F;p&gt;
+&lt;p&gt;Right after my talk Gary took the stage to talk about eHash. He gave a code tour of the Hashpool repo and finished up with a live demo of retrieving eHash to a browser wallet. It&#x27;s pretty sick to have someone else present on your work at a conference. Nice job Gary! 🤜🤛&lt;&#x2F;p&gt;
+&lt;p&gt;The theme of the conference was Mempool but mining was kind of bolted on as afterthought. A week or two before the conference a huge battle errupted in the bitcoin world over a proposed change to OP_RETURN policy limits. I stayed out of the raging debate. I&#x27;ve never been a fan of theatrics and this entire fight is tangential to the technical development of the bitcoin core client. It just irritates me as a colossal waste of time and energy so I keep my grumpiness to myself and try not to engage.&lt;&#x2F;p&gt;
+&lt;p&gt;It&#x27;s unfortunate that the theatrics took away from the secondary theme of the event. After the conference apparently people complained to Nifty that mining got short shrift. I find this very funny because most of the people at the conference chose to give their focus to the OP_RETURN theatrics...then after the fact they regretted missing out on the mining content? Irony aside, mining obviously deserves to have a dedicated conference, so I&#x27;m working with Nifty to see about making it happen.&lt;&#x2F;p&gt;
+&lt;p&gt;After the conference I went on &lt;a href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=YDTYDOJPai0&quot;&gt;Citadel Dispatch&lt;&#x2F;a&gt; to shill my project. I have say my performance wasn&#x27;t the best. I was kinda tired and grumpy that day but I went through all the talking points. I closed with a dad voice lecture about not being a dick on social media. The next day at BitDevs I had someone tell me that they were very emotional and angry about the filter debate right up until they listened to my podcast. When they heard my dad lecture they chilled out and realized that it&#x27;s not that big of a deal. That was really great to hear. 🧡&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;coinbase-playground&quot;&gt;Coinbase Playground&lt;&#x2F;h3&gt;
+&lt;p&gt;The last day of btc++ is always a hackathon. I hate hackathons. I have a family and a life and I like to sleep at night so the thought of writing code all night really does not appeal to me. But Gary asked me to do the hackathon with him and I could not refuse. We spent a lot of time at OP_NEXT discussing CTV and Gary wanted to build a testnet4 activation client. Somehow the idea morphed into a CTV coinbase transaction. We didn&#x27;t get very far at all with the code but I presented our idea to the judges anyway. I got some really good feedback and, I think most importantly, lots of people liked the idea.&lt;&#x2F;p&gt;
+&lt;p&gt;After the conference I resolved to flesh out the idea some more and submit it to the Vegas hackathon. I spent the next week and a half sprinting to get &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;vnprc&#x2F;coinbase-playground&quot;&gt;CTV + CSFS Coinbase Playground 🥪🪙🏰🛝&lt;&#x2F;a&gt; off the ground. It&#x27;s a nix devenv stack that combines a custom bitcoind node running on regtest with an electrs+esplora block explorer front end. I used this stack to develop some rust scripts that write CTV transactions to the coinbase. It was a really challenging project! I really enjoyed working on it because it was just a bit beyond my capabilities so I had to level up my skills to get it working.&lt;&#x2F;p&gt;
+&lt;p&gt;I intend to continue working on this problem because it is fascinating and fun. Not only do I want to throw my weight behind the CTV cause but it&#x27;s a SUPER useful tool to solve some of the big problems with mining. It&#x27;s not only directly applicable to my project but I think it also solves big problems for P2Pool and even for Ocean too! Check out the readme and marvel at my masterful use of emojis!&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;new-contributors&quot;&gt;New Contributors&lt;&#x2F;h3&gt;
+&lt;p&gt;I feel that my number one job in starting a new open source project is to recruit devs to contribute. In light of this I have been spending a little time each week working with new devs to get them up to speed and contributing. In fact, I just merged a PR from a new contributor this morning. Fuck yeah!&lt;&#x2F;p&gt;
+&lt;p&gt;ATL BitLab is doing a mining hackathon next month and I&#x27;ve signed on to be a mentor. Hopefully I can inspire a few more new devs to start poking at the code. Wish me luck! 🤞&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
     <entry xml:lang="en">
         <title>Build Me Up a Quote System Buttercup</title>
         <published>2025-04-05T00:00:00+00:00</published>

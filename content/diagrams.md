@@ -39,6 +39,21 @@ extra = { show_breadcrumbs = false }
 </div>
 
 <div class="diagram-entry">
+  <h3 class="diagram-title">Process Architecture</h3>
+  <a href="/images/diagrams/process-architecture.png">
+    <img src="/images/diagrams/process-architecture.png" alt="Process Architecture" class="diagram-thumb diagram-link" />
+  </a>
+</div>
+
+<div class="diagram-entry">
+  <h3 class="diagram-title">Bender Diagram</h3>
+  <a href="/images/diagrams/build-my-own-pool.jpg">
+    <img src="/images/diagrams/build-my-own-pool.jpg" alt="I'm going to build my own pool with Sv2 and ecash" class="diagram-thumb diagram-link" />
+  </a>
+  <p class="diagram-desc">Preach!</p>
+</div>
+
+<div class="diagram-entry">
   <h3 class="diagram-title">Ehash Issuance v1</h3>
   <a href="/images/diagrams/ehash-issuance-v1.svg">
     <img src="/images/diagrams/thumbs/ehash-issuance-v1-thumb.jpg" alt="eHash issuance v0.1" class="diagram-thumb diagram-link" />
@@ -65,14 +80,6 @@ extra = { show_breadcrumbs = false }
   <a href="/images/diagrams/proxy-ehash-redemption-v1.svg">
     <img src="/images/diagrams/thumbs/proxy-ehash-redemption-v1-thumb.jpg" alt="proxy eHash redemption v0.1" class="diagram-thumb diagram-link" />
   </a>
-</div>
-
-<div class="diagram-entry">
-  <h3 class="diagram-title">Bender Diagram</h3>
-  <a href="/images/diagrams/build-my-own-pool.jpg">
-    <img src="/images/diagrams/build-my-own-pool.jpg" alt="I'm going to build my own pool with Sv2 and ecash" class="diagram-thumb diagram-link" />
-  </a>
-  <p class="diagram-desc">Preach!</p>
 </div>
 
 </div>

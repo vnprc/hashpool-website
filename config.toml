@@ -58,6 +58,7 @@ navigation = [
     { url = "$BASE_URL", title = "About" },
     { url = "$BASE_URL/dev-logs", title = "Development Logs" },
     { url = "$BASE_URL/diagrams", title = "Diagrams" },
+    { url = "$BASE_URL/contact", title = "Contact" },
     { url = "$BASE_URL/search", title = "Search" },
     { url = "https://github.com/vnprc/hashpool", title = "Github" },
 ]

@@ -25,7 +25,7 @@
       {% endif %}
   </header>
 
-  {% if config.extra.papermod.show_toc | default(value=true) %}
+  {% if config.extra.papermod.show_toc | default(value=true) and page.extra.toc | default(value=true) %}
   {% include "partials/toc.html" %}
   {% endif %}
 

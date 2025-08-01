@@ -41,7 +41,7 @@ The secret sauce that makes ecash work is a cryptographic technique called blind
   <img src="../../images/what-is-hashpool/how-to-mint-ecash-inverted.png" alt="how-to-mint-ecash-inverted">
 </div>
 
-Ecash tokens work by having the mint blind sign a secret only after a user deposits some asset. The user then privately unblinds the secret and the signature. Thanks the magic of cryptography, the unblinded signature can be verified by anyone who knows the mint's public key. The combination of unblinded secret and unblinded signature is called an ecash token. Just like physical cash, ecash can be freely traded without the mint knowing the identity of its users.
+Ecash tokens work by having the mint blind sign a secret only after a user deposits some asset. The user then privately unblinds the secret and the signature. Thanks to the magic of cryptography, the unblinded signature can be verified by anyone who knows the mint's public key. The combination of unblinded secret and unblinded signature is called an ecash token. Just like physical cash, ecash can be freely traded without the mint knowing the identity of its users.
 
 ### Privacy
 

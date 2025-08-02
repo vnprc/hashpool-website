@@ -115,6 +115,15 @@
   color: var(--secondary);
 }
 
+/* Basic card layout for simple contact cards */
+.basic-card .contact-header {
+  margin-bottom: 0.75rem;
+}
+
+.basic-card .contact-link {
+  margin-top: 0;
+}
+
 .contact-cards {
   display: flex;
   flex-direction: column;
@@ -193,10 +202,20 @@
   transform: translateY(-1px);
 }
 
-.nostr-container {
+.nostr-split-container {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.nostr-left {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+}
+
+.nostr-right {
+  flex-shrink: 0;
 }
 
 .nostr-content {
@@ -206,13 +225,12 @@
 }
 
 .nostr-qr {
-  position: absolute;
-  top: 1rem;
-  right: 1.75rem;
-  width: 120px;
-  height: 120px;
+  width: 150px;
+  height: 150px;
+  flex-shrink: 0;
   border-radius: 6px;
   border: 1px solid var(--border);
+  margin-top: 0.25rem;
 }
 
 .npub-clickable {
@@ -267,6 +285,15 @@
   
   #npub-text {
     font-size: 0.8rem;
+  }
+
+  .nostr-split-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nostr-qr {
+    margin-top: 1rem;
   }
 }
 

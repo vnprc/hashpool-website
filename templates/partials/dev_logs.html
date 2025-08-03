@@ -1,7 +1,11 @@
-{% for page in paginator.pages %}
+{% set dev_section = get_section(path="dev-logs/_index.md") %}
+{% for page in dev_section.pages | sort(attribute="date") | reverse %}
 <article class="post-entry">
   <header class="entry-header">
       <h2>{{ page.title }}</h2>
+      {% if page.date %}
+      <div class="entry-date" style="font-size: 0.875rem; color: var(--secondary); margin-top: 0.25rem;">{{ page.date | date(format="%Y-%m-%d") }}</div>
+      {% endif %}
   </header>
   {% if page.summary %}
   <div class="entry-content">
@@ -9,21 +13,8 @@
   </div>
   {% endif %}
   <footer class="entry-footer">
-      {% include "partials/post_meta.html" %}
   </footer>
   <a class="entry-link" aria-label="post link to {{ page.title }}" href="{{ page.permalink }}"></a>
 </article>
 {% endfor %}
 
-{% if paginator %}
-<footer class="page-footer">
-    <nav class="pagination">
-    {% if paginator.previous %}
-        <a class="previous" href="{{ paginator.previous | safe }}">« Previous</a>
-    {% endif %}
-    {% if paginator.next %}
-        <a class="next" href="{{ paginator.next | safe }}">Next »</a>
-    {% endif %}
-    </nav>
-</footer>
-{% endif %}

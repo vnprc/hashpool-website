@@ -3,11 +3,6 @@
 {% set taxonomy_title = taxonomy.name | replace(from="_",to=" ") | title %}
 
 <header class="page-header">
-    <div class="breadcrumbs"> 
-        <a href="{{ config.base_url }}">Home</a>&nbsp;»&nbsp;
-	<a href="{{ config.base_url }}/{{ taxonomy.name }}">{{ taxonomy_title }}</a>&nbsp;»&nbsp;
-        <a href="{{ current_url }}">{{ term.name }}</a>
-    </div>
     <h1>{{ term.name | replace(from="_",to=" ") | title }}
       {% for feed_filename in config.feed_filenames %}
       <a href="{{ term.permalink ~ feed_filename }}" title="RSS" aria-label="RSS">
@@ -31,7 +26,6 @@
   </div>
   {% endif %}
   <footer class="entry-footer">
-      {% include "partials/post_meta.html" %}
   </footer>
   <a class="entry-link" aria-label="post link to {{ page.title }}" href="{{ page.permalink }}"></a>
 </article>

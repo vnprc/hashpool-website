@@ -1,6 +1,4 @@
-{% set posts_section = get_section(path="_index.md") %}
-{% set num_posts = posts_section | length %}
-{% if num_posts > 1 %}
+{% if page.higher or page.lower %}
 <nav class="paginav">
     {% if page.higher %}
     <a class="prev" href="{{ page.higher.permalink }}">

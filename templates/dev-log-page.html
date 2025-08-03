@@ -1,0 +1,72 @@
+{% extends "index.html" %}
+{% block main %}
+<article class="post-single">
+  <header class="post-header">
+      <h1 class="post-title">{{ page.title }}</h1>
+      {% if page.description %}
+      <div class="post-description">
+          {{ page.description }}
+      </div>
+      {% endif %}
+  </header>
+
+  {% if config.extra.papermod.show_toc | default(value=true) and page.extra.toc | default(value=true) %}
+  {% include "partials/toc.html" %}
+  {% endif %}
+
+  {% if page.content %}
+  <div class="post-content">
+      {{ page.content | safe }}
+  </div>
+  {% endif %}
+
+  <footer class="post-footer">
+      {% if page.taxonomies.tags %}
+      <ul class="post-tags">
+          {% for tag in page.taxonomies.tags %}
+          {% set tag_url = get_taxonomy_url(kind="tags", name=tag, lang=page.lang) %}
+          <li><a href="{{ tag_url }}">{{ tag }}</a></li>
+          {% endfor %}
+      </ul>
+      {% endif %}
+
+    {% set section = get_section(path="dev-logs/_index.md") %}
+    {% set sorted_pages = section.pages | sort(attribute="date") %}
+    {% set prev_page = false %}
+    {% set next_page = false %}
+    {% set found_current = false %}
+    
+    {% for p in sorted_pages %}
+        {% if found_current %}
+            {% set_global next_page = p %}
+            {% break %}
+        {% endif %}
+        {% if p.permalink == page.permalink %}
+            {% set_global found_current = true %}
+        {% else %}
+            {% if not found_current %}
+                {% set_global prev_page = p %}
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+    
+    <nav class="paginav">
+        {% if prev_page %}
+        <a class="prev" href="{{ prev_page.permalink }}">
+            <span class="title">« Prev</span>
+            <br>
+            <span>{{ prev_page.title }}</span>
+        </a>
+        {% endif %}
+        {% if next_page %}
+        <a class="next" href="{{ next_page.permalink }}">
+            <span class="title">Next »</span>
+            <br>
+            <span>{{ next_page.title }}</span>
+        </a>
+        {% endif %}
+    </nav>
+  </footer>
+
+</article>
+{% endblock %}

@@ -334,3 +334,41 @@
 .dark .nostr-icon {
   content: url("/images/contact/nostr-white.png");
 }
+
+/* Media Page Styles */
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.media-entry {
+  text-align: center;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.media-title {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  margin-bottom: 1rem;
+}
+
+.media-video {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dark .media-video {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.media-desc {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  color: var(--secondary);
+}

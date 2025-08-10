@@ -8,7 +8,7 @@ extra = { show_breadcrumbs = false }
 
 <div class="media-entry">
   <h3 class="media-title">Hashpools - A New Kind of Mining Pool Powered by Ecash</h3>
-  <div class="video-thumbnail" onclick="loadVideo(this, 'https://blosstr.com/e11e8de26b4f8ecd2de5ad865d0c91c7adde1c071f48f13ddc9a82505e7f0308.mp4')" style="background-image: url('https://blosstr.com/0aa8dc6ddbb74bedea1aefa4ae50d6b71a14656a90f1818a57c14379c914f3e3.avif'); background-size: cover; background-position: center;">
+  <div class="video-thumbnail" onclick="loadVideo(this, 'https://blosstr.com/e11e8de26b4f8ecd2de5ad865d0c91c7adde1c071f48f13ddc9a82505e7f0308.mp4')" style="background-image: url('https://blosstr.com/923227a7207cf395fd6b85cb18d4827d1257cbf211fe0c50468efc0d6338ec6b.jpg'); background-size: cover; background-position: center;">
     <div class="play-button">▶</div>
   </div>
   <p class="media-desc">bitcoin++ ecash edition | Berlin - 2024</p>

@@ -338,9 +338,11 @@
 /* Media Page Styles */
 .media-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: 1fr;
   gap: 2rem;
   padding: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .media-entry {
@@ -369,7 +371,7 @@
 
 .video-thumbnail {
   width: 100%;
-  height: 200px;
+  aspect-ratio: 16/9;
   background: linear-gradient(135deg, var(--primary) 0%, var(--tertiary) 100%);
   border-radius: 8px;
   cursor: pointer;

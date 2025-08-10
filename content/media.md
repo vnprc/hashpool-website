@@ -8,11 +8,46 @@ extra = { show_breadcrumbs = false }
 
 <div class="media-entry">
   <h3 class="media-title">Hashpools - A New Kind of Mining Pool Powered by Ecash</h3>
-  <video class="media-video" controls>
-    <source src="https://blosstr.com/e11e8de26b4f8ecd2de5ad865d0c91c7adde1c071f48f13ddc9a82505e7f0308.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+  <div class="video-thumbnail" onclick="loadVideo(this, 'https://blosstr.com/e11e8de26b4f8ecd2de5ad865d0c91c7adde1c071f48f13ddc9a82505e7f0308.mp4')" style="background-image: url('https://blosstr.com/0aa8dc6ddbb74bedea1aefa4ae50d6b71a14656a90f1818a57c14379c914f3e3.avif'); background-size: cover; background-position: center;">
+    <div class="play-button">▶</div>
+  </div>
   <p class="media-desc">bitcoin++ ecash edition | Berlin - 2024</p>
 </div>
 
+<div class="media-entry">
+  <h3 class="media-title">eCash & eHash: The Hashpool Solution</h3>
+  <div class="video-thumbnail" onclick="loadVideo(this, 'https://blosstr.com/e34bf835cbb362f7173472bed837685820b3e71cb0e72b0b070fe524178681bf.mp4')" style="background-image: url('https://blosstr.com/69396a9e8177eb9935254c6df9ef9a6283562e679e635a86ad0d4933d4533048.webp'); background-size: cover; background-position: center;">
+    <div class="play-button">▶</div>
+  </div>
+  <p class="media-desc">Stephan Livera Podcast 681 | August 5, 2025</p>
 </div>
+
+</div>
+
+<script>
+function loadVideo(thumbnailElement, videoUrl) {
+  // Create video element
+  const video = document.createElement('video');
+  video.className = 'media-video';
+  video.controls = true;
+  video.preload = 'metadata';
+  
+  // Create source element
+  const source = document.createElement('source');
+  source.src = videoUrl;
+  source.type = 'video/mp4';
+  
+  video.appendChild(source);
+  
+  // Add fallback text
+  video.appendChild(document.createTextNode('Your browser does not support the video tag.'));
+  
+  // Replace thumbnail with video
+  thumbnailElement.parentNode.replaceChild(video, thumbnailElement);
+  
+  // Auto-play the video
+  video.play().catch(e => {
+    console.log('Auto-play failed:', e);
+  });
+}
+</script>

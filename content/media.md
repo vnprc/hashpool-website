@@ -8,7 +8,7 @@ extra = { show_breadcrumbs = false }
 
 <div class="media-entry">
   <h3 class="media-title">Hashpools - A New Kind of Mining Pool Powered by Ecash</h3>
-  <div class="video-thumbnail" onclick="loadVideo(this, 'https://blosstr.com/e11e8de26b4f8ecd2de5ad865d0c91c7adde1c071f48f13ddc9a82505e7f0308.mp4')" style="background-image: url('https://blosstr.com/923227a7207cf395fd6b85cb18d4827d1257cbf211fe0c50468efc0d6338ec6b.jpg'); background-size: cover; background-position: center;">
+  <div class="video-thumbnail" onclick="loadVideo(this, 'https://blosstr.com/e11e8de26b4f8ecd2de5ad865d0c91c7adde1c071f48f13ddc9a82505e7f0308.mp4')" style="background-image: url('/images/media/bitcoin-plus-plus-thumbnail.jpg'); background-size: cover; background-position: center;">
     <div class="play-button">▶</div>
   </div>
   <p class="media-desc">bitcoin++ ecash edition | Berlin - 2024</p>
@@ -16,7 +16,7 @@ extra = { show_breadcrumbs = false }
 
 <div class="media-entry">
   <h3 class="media-title">eCash & eHash: The Hashpool Solution</h3>
-  <div class="video-thumbnail" onclick="loadVideo(this, 'https://blosstr.com/e34bf835cbb362f7173472bed837685820b3e71cb0e72b0b070fe524178681bf.mp4')" style="background-image: url('https://blosstr.com/69396a9e8177eb9935254c6df9ef9a6283562e679e635a86ad0d4933d4533048.webp'); background-size: cover; background-position: center;">
+  <div class="video-thumbnail" onclick="loadVideo(this, 'https://blosstr.com/e34bf835cbb362f7173472bed837685820b3e71cb0e72b0b070fe524178681bf.mp4')" style="background-image: url('/images/media/stephan-livera-thumbnail.webp'); background-size: cover; background-position: center;">
     <div class="play-button">▶</div>
   </div>
   <p class="media-desc">Stephan Livera Podcast 681 | August 5, 2025</p>

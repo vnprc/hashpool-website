@@ -1,0 +1,22 @@
+title Ehash Issuance (bitaxe-cashu)
+
+participant Bitaxe
+participant Pool
+participant Mint
+participant Cashu Wallet
+
+entryspacing 1.0
+Bitaxe->Pool:open connection
+loop poll loop
+  Cashu Wallet->Mint:poll for PAID quotes
+end
+Pool-->Bitaxe:block template & keyset
+note over Bitaxe:share found
+note over Bitaxe:generate blinded secret
+note over Bitaxe:generate locking secret
+Bitaxe->Pool:submit share & secrets
+Pool->Mint:create quote UNPAID
+note over Pool:validate share
+Pool->Mint:update quote PAID
+Cashu Wallet<-Mint:sweep ehash
+

@@ -1,0 +1,25 @@
+title Passthrough Hashpool Redemption and Verification
+
+participant Proxy / Wallet
+participant Proxy / Mint
+participant PPLNS Pool
+
+
+entryspacing 0.9
+Proxy / Mint->PPLNS Pool: create account
+note over PPLNS Pool,Proxy / Wallet:mining
+note over Proxy / Mint:rotate keyset
+Proxy / Mint->Proxy / Wallet:block template & keyset
+note over PPLNS Pool,Proxy / Wallet:mining
+note over PPLNS Pool:block is found
+PPLNS Pool->Proxy / Mint:payout
+Proxy / Mint->Proxy / Wallet:broadcast proof of work
+note over Proxy / Wallet:verify proof of work
+note over Proxy / Mint:epoch matures
+
+Proxy / Wallet->Proxy / Mint:mature ehash
+Proxy / Wallet<--Proxy / Mint:ecash
+note over Proxy / Mint: ehash TTL expires
+Proxy / Mint->Proxy / Wallet:proof of liabilities
+end
+note over Proxy / Wallet:verify proofs

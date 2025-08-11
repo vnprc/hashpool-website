@@ -23,6 +23,14 @@ extra = { show_breadcrumbs = false }
 </div>
 
 <div class="diagram-entry">
+  <h3 class="diagram-title">Ehash Issuance v3</h3>
+  <a href="/images/diagrams/ehash-issuance-v3.svg">
+    <img src="/images/diagrams/ehash-issuance-v3.svg" alt="eHash Issuance v3" class="diagram-thumb diagram-link" />
+  </a>
+  <p class="diagram-desc">eHash issuance using NUT-20 mint locking keys</p>
+</div>
+
+<div class="diagram-entry">
   <h3 class="diagram-title">Ehash Issuance v2</h3>
   <a href="/images/diagrams/ehash-issuance-v2.svg">
     <img src="/images/diagrams/thumbs/ehash-issuance-v2-thumb.jpg" alt="eHash Issuance Diagram" class="diagram-thumb diagram-link" />

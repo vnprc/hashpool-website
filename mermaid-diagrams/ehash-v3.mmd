@@ -1,0 +1,31 @@
+sequenceDiagram
+title Ehash Issuance v3
+
+participant ASIC
+participant Proxy
+participant Pool
+participant Mint
+participant CashuWallet
+
+  note over CashuWallet: generate locking keypair
+CashuWallet->>Proxy:master locking pubkey
+Proxy->>Pool:open connection
+Pool<<->>Proxy:template negotiation if applicable
+Pool->>Proxy:jobs
+Proxy->>ASIC:jobs
+note over ASIC:share found
+ASIC->>Proxy:submit a mining share
+
+note over Proxy:generate child locking pubkey
+Proxy->>Pool:submit share & child pubkey
+note over Pool:validate share
+Pool->>Mint:create quote UNPAID
+note over Pool:validate block template
+Pool->>Mint:update quote PAID
+Pool->>Proxy:share accepted
+loop wallet comes online
+  CashuWallet<<->>Mint: look up quote ID by locking pubkey
+  CashuWallet<<->>Mint: query quote by ID
+  note over CashuWallet: generate blinded secrets
+  CashuWallet<<->>Mint:sweep ehash tokens
+end

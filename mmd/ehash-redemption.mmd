@@ -1,0 +1,25 @@
+title Ehash Redemption and Verification
+
+participant Proxy / Wallet
+participant Pool / Mint
+
+
+entryspacing 0.9
+Proxy / Mint->PPLNS Pool
+note over Proxy / Wallet,Pool / Mint:mining
+
+note over Pool / Mint:rotate keyset, start new epoch
+Proxy / Wallet<-Pool / Mint:block template & keyset
+note over Proxy / Wallet,Pool / Mint:mining
+note over Pool / Mint:block found
+
+Proxy / Wallet<-Pool / Mint: broadcast proof of work
+note over Proxy / Wallet:verify proof of work
+note over Pool / Mint:ehash epoch matures
+
+Proxy / Wallet->Pool / Mint: mature ehash
+Proxy / Wallet<--Pool / Mint: ecash
+note over Pool / Mint: ehash TTL expires
+Pool / Mint->Proxy / Wallet:proof of liabilities
+end
+note over Proxy / Wallet:verify proofs

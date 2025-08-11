@@ -1,0 +1,25 @@
+title Ehash Issuance
+
+participant ASIC
+participant Proxy
+participant Pool
+participant Mint
+participant Cashu Wallet
+
+entryspacing 1.0
+Proxy->Pool:open connection
+loop poll loop
+  Cashu Wallet->Mint:poll for PAID quotes
+end
+Pool-->Proxy:block template & keyset
+Proxy->ASIC:block template
+note over ASIC:share found
+ASIC->>Proxy:submit a mining share
+note over Proxy:generate blinded secret
+note over Proxy:generate locking secret
+Proxy->Pool:submit share & secrets
+Pool->Mint:create quote UNPAID
+note over Pool:validate share
+Pool->Mint:update quote PAID
+Cashu Wallet<-Mint:sweep ehash
+

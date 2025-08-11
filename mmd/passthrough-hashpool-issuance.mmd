@@ -1,0 +1,22 @@
+title Passthrough Hashpool Issuance
+
+participant ASIC
+participant Proxy / Wallet
+participant Proxy / Mint
+participant PPLNS Pool
+
+
+entryspacing 0.9
+Proxy / Wallet->Proxy / Mint:open connection
+Proxy / Mint-->Proxy / Wallet:block template & keyset
+ASIC->>Proxy / Wallet:submit a mining share
+note over Proxy / Wallet:generate blinded secret
+Proxy / Wallet->Proxy / Mint:submit share & blinded secret
+note over Proxy / Mint:validate share
+Proxy / Mint->>PPLNS Pool:submit share
+note over Proxy / Mint:sign message
+Proxy / Mint-->Proxy / Wallet:blinded signature
+note over Proxy / Wallet:unblind signature
+note over Proxy / Wallet:save to wallet DB
+Proxy / Wallet->Proxy / Mint:ehash
+Proxy / Wallet<--Proxy / Mint:ehash

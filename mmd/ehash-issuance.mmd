@@ -1,0 +1,23 @@
+title Ehash Issuance
+
+participant ASIC
+participant Proxy / Wallet
+participant Pool / Mint
+
+
+entryspacing 1.0
+Proxy / Wallet->Pool / Mint:open connection
+Pool / Mint-->Proxy / Wallet:block template & keyset
+Proxy / Wallet->ASIC:block template
+ASIC->>Proxy / Wallet:submit a mining share
+note over Proxy / Wallet:generate blinded secret
+Proxy / Wallet->Pool / Mint:submit share & blinded secret
+note over Pool / Mint:validate share
+note over Pool / Mint:sign message
+Pool / Mint-->Proxy / Wallet:blinded signature
+note over Proxy / Wallet:unblind signature
+note over Proxy / Wallet:save to wallet DB
+
+
+Proxy / Wallet->Pool / Mint:ehash
+Proxy / Wallet<--Pool / Mint:ehash

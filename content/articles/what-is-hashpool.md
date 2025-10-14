@@ -94,3 +94,7 @@ In practice, users can freely swap value between ecash and bitcoin, leveraging t
 An ecash mint is the best kind of custodian: a private accountless custodian. This is a huge improvement over account-based custodians because it means a mint cannot selectively refuse service. All mining pools are custodial in nature. Hashpool will enable pools to be the best kind of custodian: a private and verifiable custodian.
 
 Hashpool is still in early development and we're looking for help! If you would like to contribute please get in contact!
+
+### Try It Out
+
+You can mine testnet4 ehash on the [proxy site](https://proxy.hashpool.dev/miners) and check out the upstream pool on the [pool site](https://pool.hashpool.dev). Please note: this is a test instance and the protocol is still under heavy development. Not all ASIC firmware is compatibe but AxeOS is comfirmed to work. The site will be buggy and your ehash will be rugged!

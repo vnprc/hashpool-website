@@ -23,7 +23,7 @@ extra = { show_breadcrumbs = false }
 </div>
 
 <div class="media-entry">
-  <h3 class="media-title">Hashpool - One Year Development Update</h3>
+  <h3 class="media-title">Hashpools - One Year Development Update</h3>
   <div class="video-thumbnail" onclick="loadVideo(this, 'https://blosstr.com/a9cf0797f6da66efeabe830df864e0094697ab8a8fb3daf41594add494e019ad.mp4')" style="background-image: url('/images/media/btcpp-durham-hashpool-one-year-thumbnail.jpg'); background-size: cover; background-position: center;">
     <div class="play-button">▶</div>
   </div>

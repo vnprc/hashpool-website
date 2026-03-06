@@ -57,3 +57,32 @@ Refer to [config.toml](config.toml) for available options.
 If you would like to help out porting hugo-Papermod to Zola feel free to pick
 up a feature and start working on it. All help, no matter how small the
 contribution is highly appreciated.
+
+## NixOS
+
+This repo uses Zola 0.19.2 to deploy via github pages. On NixOS you need to build Zola 0.19.2 with an older GCC in a nix shell:
+
+```
+nix shell \
+  nixpkgs#rustc \
+  nixpkgs#cargo \
+  nixpkgs#pkg-config \
+  nixpkgs#openssl \
+  nixpkgs#libsass \
+  nixpkgs#gcc13 \
+  -c bash
+```
+
+Inside that shell build Zola 0.19.2:
+
+```
+export CC=gcc
+export CXX=g++
+cargo install --locked \
+  --git https://github.com/getzola/zola \
+  --tag v0.19.2 \
+  --root ~/.local \
+  --force
+```
+
+Verify the build worked with `~/.local/bin/zola --version`. Run the hashpool website with `~/.local/bin/zola serve`.

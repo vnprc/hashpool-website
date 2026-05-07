@@ -34,7 +34,7 @@ index_format = "elasticlunr_json"
 highlight_code = true
 
 [extra]
-copyright_url = "https://github.com/vnprc"
+copyright_url = "https://forge.anarch.diy/vnprc"
 
 [extra.papermod]
 title = "Hashpool"
@@ -51,7 +51,6 @@ show_post_nav_links = true
 show_post_meta = true
 default_toc_open = false
 show_post_edit_button = false
-edit_post_url = "https://github.com/cydave/zola-theme-papermod/tree/master"
 #copyright = ""
 date_format = "%Y-%m-%d"
 navigation = [

@@ -61,7 +61,7 @@ navigation = [
     { url = "$BASE_URL/media", title = "Media" },
     { url = "$BASE_URL/contact", title = "Contact" },
     { url = "$BASE_URL/search", title = "Search" },
-    { url = "https://github.com/vnprc/hashpool", title = "Github" },
+    { url = "https://forge.anarch.diy/vnprc/hashpool", title = "Code" },
 ]
 
 home_title = "Hashpool"

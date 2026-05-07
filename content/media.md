@@ -27,7 +27,7 @@ extra = { show_breadcrumbs = false }
   <div class="video-thumbnail" onclick="loadVideo(this, 'https://blosstr.com/a9cf0797f6da66efeabe830df864e0094697ab8a8fb3daf41594add494e019ad.mp4')" style="background-image: url('/images/media/btcpp-durham-hashpool-one-year-thumbnail.jpg'); background-size: cover; background-position: center;">
     <div class="play-button">▶</div>
   </div>
-  <p class="media-desc">bitcoin++ local edition | Durham, 2025</p>
+  <p class="media-desc">bitcoin++ local edition | Durham - 2025</p>
 </div>
 
 <div class="media-entry">
@@ -35,7 +35,7 @@ extra = { show_breadcrumbs = false }
   <div class="video-thumbnail" onclick="loadVideo(this, 'https://blosstr.com/e34bf835cbb362f7173472bed837685820b3e71cb0e72b0b070fe524178681bf.mp4')" style="background-image: url('/images/media/stephan-livera-thumbnail.webp'); background-size: cover; background-position: center;">
     <div class="play-button">▶</div>
   </div>
-  <p class="media-desc">Stephan Livera Podcast 681 | August 5, 2025</p>
+  <p class="media-desc">Stephan Livera Podcast 681 | August 5 - 2025</p>
 </div>
 
 </div>

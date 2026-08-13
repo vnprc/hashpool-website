@@ -459,21 +459,6 @@
   height: auto;
 }
 
-.epoch-fig figcaption {
-  max-width: 560px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-
-.epoch-glossary {
-  text-align: center;
-}
-
-.epoch-glossary dd {
-  margin-inline-start: 0;
-}
-
 .epoch-fig text {
   fill: var(--content);
 }

@@ -83,7 +83,7 @@ Why wait? Because sometimes a valid block isn't accepted into the blockchain, an
 The wait separates two different groups of work:
 
 - **Shares found right after the new block are provisionally assigned to a new epoch.** Their quotes remain unpaid, so no ehash tokens exist to transfer or redeem until the new epoch becomes final.
-- **The previous epoch is closed.** It accepts no new shares. If the new epoch reaches finality, the closed epoch's mining reward and total share count are fixed, so every ehash token from it represents a concrete fraction of that reward.
+- **The previous epoch is closed.** It accepts no new shares. If the new epoch reaches finality, the closed epoch's mining reward and total share count are fixed, so every ehash token from that epoch now represents a concrete fraction of that reward.
 
 Miners on ordinary pools already know this kind of wait as an "immature balance." Hashpool represents it explicitly with unpaid quotes.
 
@@ -93,7 +93,7 @@ Miners on ordinary pools already know this kind of wait as an "immature balance.
 
 Sometimes two miners find a block at nearly the same moment, and the network briefly disagrees about the newest link of the chain. One branch soon grows longer and wins; blocks on the losing branch are *orphaned* — struck from history. This is a **reorg** — rare in practice these days, but a normal part of how the network resolves a tie.
 
-So suppose the worst: the pool's winning block gets orphaned before its six confirmations arrive, and the replacement block pays someone else. On the chain, that reward now never happened.
+So suppose the worst: the pool's winning block gets orphaned before its six confirmations arrive, and the replacement block pays someone else. On the chain, that mining reward now never happened.
 
 Hashpool's answer is quiet: the epoch that block opened simply dissolves. Every quote stamped into the young epoch slides back into the previous epoch — the round that, it turns out, never ended — and the mint marks it paid immediately. The shares were honest work, and they still count in full.
 

@@ -356,7 +356,7 @@ Follow one mining share through hashpool: how it becomes ehash, what an epoch is
 <p>Miners on ordinary pools already know this feeling: it is the classic "immature balance" that appears after a pool finds a block. Hashpool just wears it openly.</p>
 
 <figure class="epoch-fig epoch-anim">
-<svg viewBox="0 0 640 330" role="img" aria-label="Animation: after the winning block at 840112, five more blocks arrive one by one and the confirmation count climbs from one to six. At six, the epoch becomes final and its quotes flip from waiting to ready. A scale bar shows the six-block wait is tiny next to the 100-block lock bitcoin puts on the reward itself." xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 640 330" role="img" aria-label="Animation: after the winning block at 840112, five more blocks arrive one by one and the confirmation count climbs from one to six. At six, the epoch becomes final and its quotes flip from waiting to ready." xmlns="http://www.w3.org/2000/svg">
 <defs>
 <path id="d7-sh" d="M0 -6L6 0 0 6 -6 0Z"/>
 <path id="d7-st" d="M0 -7L1.65 -2.27 6.66 -2.16 2.66 0.87 4.11 5.66 0 2.8 -4.11 5.66 -2.66 0.87 -6.66 -2.16 -1.65 -2.27Z"/>
@@ -386,36 +386,26 @@ Follow one mining share through hashpool: how it becomes ehash, what an epoch is
 <rect class="an a-fin sB" x="30" y="112" width="312" height="16" rx="4" fill="none" stroke="#0d9488"/>
 <text class="an a-pre" x="186" y="124" text-anchor="middle" font-size="11" font-family="monospace" fill="#1f1f1f" opacity="0">epoch 840112 — on hold</text>
 <text class="an a-fin" x="186" y="124" text-anchor="middle" font-size="11" font-family="monospace" fill="#1f1f1f">epoch 840112 — final</text>
-<rect class="card" x="30" y="168" width="310" height="140" rx="10" fill="#fff" stroke="#e5e5e5"/>
-<text class="t1" x="185" y="192" text-anchor="middle" font-size="13" font-weight="600" fill="#1e1e1e">the mint's book — epoch 840112</text>
-<line class="sBd" x1="48" y1="202" x2="322" y2="202" stroke="#e5e5e5"/>
-<use href="#d7-sh" class="fB" x="60" y="223" fill="#0d9488"/>
-<text x="80" y="228" font-size="13" font-family="monospace" fill="#1f1f1f">64</text>
-<g class="an a-dim"><rect class="sN" x="122" y="212" width="76" height="22" rx="11" fill="none" stroke="#6c6c6c" stroke-dasharray="3 3"/><text class="t2" x="160" y="227" text-anchor="middle" font-size="11" fill="#6c6c6c">waiting…</text></g>
-<text class="t2" x="212" y="227" font-size="11" fill="#6c6c6c">→</text>
-<g class="an a-lit"><rect class="sB" x="228" y="212" width="76" height="22" rx="11" fill="#0d9488" fill-opacity="0.12" stroke="#0d9488"/><text x="266" y="227" text-anchor="middle" font-size="11" fill="#1f1f1f">ready ✓</text></g>
-<use href="#d7-sh" class="fB" x="60" y="255" fill="#0d9488"/>
-<text x="80" y="260" font-size="13" font-family="monospace" fill="#1f1f1f">32</text>
-<g class="an a-dim"><rect class="sN" x="122" y="244" width="76" height="22" rx="11" fill="none" stroke="#6c6c6c" stroke-dasharray="3 3"/><text class="t2" x="160" y="259" text-anchor="middle" font-size="11" fill="#6c6c6c">waiting…</text></g>
-<text class="t2" x="212" y="259" font-size="11" fill="#6c6c6c">→</text>
-<g class="an a-lit"><rect class="sB" x="228" y="244" width="76" height="22" rx="11" fill="#0d9488" fill-opacity="0.12" stroke="#0d9488"/><text x="266" y="259" text-anchor="middle" font-size="11" fill="#1f1f1f">ready ✓</text></g>
-<use href="#d7-sh" class="fB" x="60" y="287" fill="#0d9488"/>
-<text x="80" y="292" font-size="13" font-family="monospace" fill="#1f1f1f">16</text>
-<g class="an a-dim"><rect class="sN" x="122" y="276" width="76" height="22" rx="11" fill="none" stroke="#6c6c6c" stroke-dasharray="3 3"/><text class="t2" x="160" y="291" text-anchor="middle" font-size="11" fill="#6c6c6c">waiting…</text></g>
-<text class="t2" x="212" y="291" font-size="11" fill="#6c6c6c">→</text>
-<g class="an a-lit"><rect class="sB" x="228" y="276" width="76" height="22" rx="11" fill="#0d9488" fill-opacity="0.12" stroke="#0d9488"/><text x="266" y="291" text-anchor="middle" font-size="11" fill="#1f1f1f">ready ✓</text></g>
-<text class="t2" x="490" y="196" text-anchor="middle" font-size="12.5" fill="#6c6c6c">how long is six blocks, really?</text>
-<rect class="fN" x="370" y="228" width="240" height="12" rx="6" fill="#6c6c6c" fill-opacity="0.15"/>
-<rect class="fB" x="370" y="228" width="15" height="12" rx="6" fill="#0d9488"/>
-<line class="sB" x1="385" y1="222" x2="385" y2="246" stroke="#0d9488"/>
-<text x="376" y="216" font-size="11" fill="#1f1f1f">ehash unlocks: 6</text>
-<g class="sN" stroke="#6c6c6c" fill="none"><path d="M596 224v-4a6 6 0 0 1 12 0v4"/><rect x="593" y="224" width="18" height="13" rx="2"/></g>
-<text x="612" y="216" text-anchor="end" font-size="11" fill="#1f1f1f">the reward itself: 100</text>
-<text class="t2" x="490" y="272" text-anchor="middle" font-size="11.5" fill="#6c6c6c">bitcoin locks every block reward for 100 blocks —</text>
-<text class="t2" x="490" y="288" text-anchor="middle" font-size="11.5" fill="#6c6c6c">the six-block wait ends long before</text>
-<text class="t2" x="490" y="304" text-anchor="middle" font-size="11.5" fill="#6c6c6c">there is anything to spend</text>
+<rect class="card" x="80" y="168" width="480" height="140" rx="10" fill="#fff" stroke="#e5e5e5"/>
+<text class="t1" x="320" y="192" text-anchor="middle" font-size="13" font-weight="600" fill="#1e1e1e">the mint's book — epoch 840112</text>
+<line class="sBd" x1="100" y1="202" x2="540" y2="202" stroke="#e5e5e5"/>
+<use href="#d7-sh" class="fB" x="160" y="223" fill="#0d9488"/>
+<text x="190" y="228" text-anchor="end" font-size="13" font-family="monospace" fill="#1f1f1f">64</text>
+<g class="an a-dim"><rect class="sN" x="230" y="212" width="100" height="22" rx="11" fill="none" stroke="#6c6c6c" stroke-dasharray="3 3"/><text class="t2" x="280" y="227" text-anchor="middle" font-size="11" fill="#6c6c6c">waiting…</text></g>
+<text class="t2" x="350" y="227" text-anchor="middle" font-size="11" fill="#6c6c6c">→</text>
+<g class="an a-lit"><rect class="sB" x="370" y="212" width="100" height="22" rx="11" fill="#0d9488" fill-opacity="0.12" stroke="#0d9488"/><text x="420" y="227" text-anchor="middle" font-size="11" fill="#1f1f1f">ready ✓</text></g>
+<use href="#d7-sh" class="fB" x="160" y="255" fill="#0d9488"/>
+<text x="190" y="260" text-anchor="end" font-size="13" font-family="monospace" fill="#1f1f1f">32</text>
+<g class="an a-dim"><rect class="sN" x="230" y="244" width="100" height="22" rx="11" fill="none" stroke="#6c6c6c" stroke-dasharray="3 3"/><text class="t2" x="280" y="259" text-anchor="middle" font-size="11" fill="#6c6c6c">waiting…</text></g>
+<text class="t2" x="350" y="259" text-anchor="middle" font-size="11" fill="#6c6c6c">→</text>
+<g class="an a-lit"><rect class="sB" x="370" y="244" width="100" height="22" rx="11" fill="#0d9488" fill-opacity="0.12" stroke="#0d9488"/><text x="420" y="259" text-anchor="middle" font-size="11" fill="#1f1f1f">ready ✓</text></g>
+<use href="#d7-sh" class="fB" x="160" y="287" fill="#0d9488"/>
+<text x="190" y="292" text-anchor="end" font-size="13" font-family="monospace" fill="#1f1f1f">16</text>
+<g class="an a-dim"><rect class="sN" x="230" y="276" width="100" height="22" rx="11" fill="none" stroke="#6c6c6c" stroke-dasharray="3 3"/><text class="t2" x="280" y="291" text-anchor="middle" font-size="11" fill="#6c6c6c">waiting…</text></g>
+<text class="t2" x="350" y="291" text-anchor="middle" font-size="11" fill="#6c6c6c">→</text>
+<g class="an a-lit"><rect class="sB" x="370" y="276" width="100" height="22" rx="11" fill="#0d9488" fill-opacity="0.12" stroke="#0d9488"/><text x="420" y="291" text-anchor="middle" font-size="11" fill="#1f1f1f">ready ✓</text></g>
 </svg>
-<figcaption><p>The maturity window: one confirmation per new block, and at six the epoch is final — every waiting quote flips to ready. The bar shows why nothing real is lost in the wait.</p></figcaption>
+<figcaption><p>The maturity window: one confirmation per new block, and at six the epoch is final — every waiting quote flips to ready.</p></figcaption>
 </figure>
 
 <h3 id="when-the-chain-changes-its-mind">When the Chain Changes Its Mind</h3>

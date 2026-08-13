@@ -7,19 +7,40 @@ Follow one mining share through hashpool: how it becomes ehash, what an epoch is
 """
 +++
 
-Hashpool pays miners in ehash — digital cash notes backed by mining work. Every one of those notes is born, matures, and lives out its life inside an <em>epoch</em>: one round of the pool's history, bookended by block wins.
+<div class="toc" style="margin-top: 1em;">
+<details>
+<summary accesskey="c" title="(Alt + C)"><span class="details">Table of Contents</span></summary>
+<div class="inner">
+<ul>
+<li><a href="#a-share-is-born" aria-label="A Share Is Born">A Share Is Born</a></li>
+<li><a href="#the-mint-writes-it-down" aria-label="The Mint Writes It Down">The Mint Writes It Down</a></li>
+<li><a href="#quotes-become-ehash" aria-label="Quotes Become ehash">Quotes Become ehash</a></li>
+<li><a href="#every-epoch-is-its-own-money" aria-label="Every Epoch Is Its Own Money">Every Epoch Is Its Own Money</a></li>
+<li><a href="#the-pool-wins-a-block" aria-label="The Pool Wins a Block">The Pool Wins a Block</a></li>
+<li><a href="#the-epoch-turns-over" aria-label="The Epoch Turns Over">The Epoch Turns Over</a></li>
+<li><a href="#the-maturity-window" aria-label="The Maturity Window">The Maturity Window</a></li>
+<li><a href="#when-the-chain-changes-its-mind" aria-label="When the Chain Changes Its Mind">When the Chain Changes Its Mind</a></li>
+<li><a href="#after-the-epoch" aria-label="After the Epoch">After the Epoch</a></li>
+<li><a href="#the-whole-story" aria-label="The Whole Story">The Whole Story</a></li>
+<li><a href="#glossary" aria-label="Glossary">Glossary</a></li>
+</ul>
+</div>
+</details>
+</div>
 
-This page follows a single share all the way through that story. By the end you will know what an epoch is, why brand-new ehash waits a few blocks before it can be spent, and why a blockchain reorg costs nobody anything.
+<p>Hashpool pays miners in ehash — digital cash notes backed by mining work. Every one of those notes is born, matures, and lives out its life inside an <em>epoch</em>: one round of the pool's history, bookended by block wins.</p>
 
-If you are new to hashpool itself, [What is Hashpool?](@/articles/what-is-hashpool.md) is the friendly introduction. You don't need any cashu or ecash background to read this page.
+<p>This page follows a single share all the way through that story. By the end you will know what an epoch is, why brand-new ehash waits a few blocks before it can be spent, and why a blockchain reorg costs nobody anything.</p>
 
-### A Share Is Born
+<p>If you are new to hashpool itself, <a href="/articles/what-is-hashpool/">What is Hashpool?</a> is the friendly introduction. You don't need any cashu or ecash background to read this page.</p>
 
-A mining machine makes millions of guesses per second at a puzzle, and almost every guess misses.
+<h3 id="a-share-is-born">A Share Is Born</h3>
 
-A guess that comes close is still worth something: it proves the machine is genuinely working. Pools call these near-misses **shares**, and miners send a steady stream of them upstream. A share that proves more work counts for more.
+<p>A mining machine makes millions of guesses per second at a puzzle, and almost every guess misses.</p>
 
-Once in a very long while, a share doesn't just come close — it actually solves the puzzle. That share is a new **block**, and it carries the reward the whole pool has been working toward.
+<p>A guess that comes close is still worth something: it proves the machine is genuinely working. Pools call these near-misses <strong>shares</strong>, and miners send a steady stream of them upstream. A share that proves more work counts for more.</p>
+
+<p>Once in a very long while, a share doesn't just come close — it actually solves the puzzle. That share is a new <strong>block</strong>, and it carries the reward the whole pool has been working toward.</p>
 
 <figure class="epoch-fig">
 <svg viewBox="0 0 640 190" role="img" aria-label="A miner sends a stream of small diamond-shaped shares to the pool. One larger share, marked with a star, also solves a block." xmlns="http://www.w3.org/2000/svg">
@@ -60,11 +81,11 @@ Once in a very long while, a share doesn't just come close — it actually solve
 <figcaption><p>Shares flow from miner to pool, each one proof of effort. The rare share that also solves a block is the whole game.</p></figcaption>
 </figure>
 
-### The Mint Writes It Down
+<h3 id="the-mint-writes-it-down">The Mint Writes It Down</h3>
 
-Hashpool's pool hands every accepted share to its cashier — a piece of software called the **mint**.
+<p>Hashpool's pool hands every accepted share to its cashier — a piece of software called the <strong>mint</strong>.</p>
 
-The mint keeps a book. For each share it writes one entry: this share arrived, it is worth this much, and it may be cashed in later. An entry in that book is called a **quote**. Nothing has been handed out yet — a quote is just the mint's written promise.
+<p>The mint keeps a book. For each share it writes one entry: this share arrived, it is worth this much, and it may be cashed in later. An entry in that book is called a <strong>quote</strong>. Nothing has been handed out yet — a quote is just the mint's written promise.</p>
 
 <figure class="epoch-fig">
 <svg viewBox="0 0 640 220" role="img" aria-label="Shares arrive at the mint's book, where each becomes one row: a quote with an amount." xmlns="http://www.w3.org/2000/svg">
@@ -96,11 +117,11 @@ The mint keeps a book. For each share it writes one entry: this share arrived, i
 <figcaption><p>One share, one quote. A bigger proof of work gets a bigger entry.</p></figcaption>
 </figure>
 
-### Quotes Become ehash
+<h3 id="quotes-become-ehash">Quotes Become ehash</h3>
 
-Your wallet checks the book, finds your quotes, and cashes them in.
+<p>Your wallet checks the book, finds your quotes, and cashes them in.</p>
 
-What it gets back are **ehash** notes: bearer tokens, like paper banknotes. Whoever holds them owns them. The cashing-in uses blind signatures, so the mint cannot tell which notes ended up in whose wallet — [What is Hashpool?](@/articles/what-is-hashpool.md) explains that trick.
+<p>What it gets back are <strong>ehash</strong> notes: bearer tokens, like paper banknotes. Whoever holds them owns them. The cashing-in uses blind signatures, so the mint cannot tell which notes ended up in whose wallet — <a href="/articles/what-is-hashpool/">What is Hashpool?</a> explains that trick.</p>
 
 <figure class="epoch-fig">
 <svg viewBox="0 0 640 240" role="img" aria-label="Quotes in the mint's book are cashed in and come out as ehash notes, drawn like small banknotes, each carrying a stamp." xmlns="http://www.w3.org/2000/svg">
@@ -154,11 +175,11 @@ What it gets back are **ehash** notes: bearer tokens, like paper banknotes. Whoe
 <figcaption><p>Quotes leave the book and come out as ehash notes in your wallet. Notice the little stamp on each note — that's next.</p></figcaption>
 </figure>
 
-### Every Epoch Is Its Own Money
+<h3 id="every-epoch-is-its-own-money">Every Epoch Is Its Own Money</h3>
 
-The pool's life is divided into rounds. A round begins when the pool wins a block and ends when it wins the next one. In hashpool, these rounds are called **epochs**.
+<p>The pool's life is divided into rounds. A round begins when the pool wins a block and ends when it wins the next one. In hashpool, these rounds are called <strong>epochs</strong>.</p>
 
-Each epoch issues its own money. Every ehash note is stamped with the epoch that minted it, and the epoch is named after a block height: the height of the winning block that opened it — the spot on the chain where the last reward landed.
+<p>Each epoch issues its own money. Every ehash note is stamped with the epoch that minted it, and the epoch is named after a block height: the height of the winning block that opened it — the spot on the chain where the last reward landed.</p>
 
 <figure class="epoch-fig">
 <svg viewBox="0 0 640 190" role="img" aria-label="A close-up of one ehash note showing its face value and its series stamp, which names the epoch that minted it." xmlns="http://www.w3.org/2000/svg">
@@ -182,9 +203,9 @@ Each epoch issues its own money. Every ehash note is stamped with the epoch that
 <figcaption><p>Two notes from the same epoch are interchangeable. Notes from different epochs are different money — like banknote series with different years printed on them.</p></figcaption>
 </figure>
 
-Why separate money for each round? Because all the shares in one epoch were part of the same chase for the same next reward. They belong together, and it would be unfair to mix them with another round's work.
+<p>Why separate money for each round? Because all the shares in one epoch were part of the same chase for the same next reward. They belong together, and it would be unfair to mix them with another round's work.</p>
 
-On the blockchain, the pool's history looks like colored spans between wins:
+<p>On the blockchain, the pool's history looks like colored spans between wins:</p>
 
 <figure class="epoch-fig">
 <svg viewBox="0 0 640 200" role="img" aria-label="A chain of blocks with two colored spans beneath it: epoch 840000 begins at a starred winning block at height 840000 and ends where a second starred winning block at height 840112 begins the next epoch." xmlns="http://www.w3.org/2000/svg">
@@ -225,15 +246,15 @@ On the blockchain, the pool's history looks like colored spans between wins:
 <figcaption><p>The pool's history, colored by epoch. A star marks a winning block; its height names the epoch it opens.</p></figcaption>
 </figure>
 
-One aside for the curious: under the hood, an epoch's full name also includes the pool's public key, so a single mint can serve many pools without their ehash ever getting mixed up. That's the whole story of the name — a pool and a height.
+<p>One aside for the curious: under the hood, an epoch's full name also includes the pool's public key, so a single mint can serve many pools without their ehash ever getting mixed up. That's the whole story of the name — a pool and a height.</p>
 
-### The Pool Wins a Block
+<h3 id="the-pool-wins-a-block">The Pool Wins a Block</h3>
 
-Now the big moment. One of those millions of shares actually solves the puzzle, and the pool's block joins the chain.
+<p>Now the big moment. One of those millions of shares actually solves the puzzle, and the pool's block joins the chain.</p>
 
-A block's very first transaction — called the **coinbase** — is the one that creates brand-new bitcoin. In hashpool, the coinbase pays that reward straight to the mint's address.
+<p>A block's very first transaction — called the <strong>coinbase</strong> — is the one that creates brand-new bitcoin. In hashpool, the coinbase pays that reward straight to the mint's address.</p>
 
-Nobody has to tell the mint it won. The mint watches the blockchain itself and recognizes its own address in the new block. A message can get lost; a payment recorded on the chain cannot.
+<p>Nobody has to tell the mint it won. The mint watches the blockchain itself and recognizes its own address in the new block. A message can get lost; a payment recorded on the chain cannot.</p>
 
 <figure class="epoch-fig">
 <svg viewBox="0 0 640 230" role="img" aria-label="The winning block's first transaction, the coinbase, pays the newly created reward to the mint's address. The mint sees it by watching the chain." xmlns="http://www.w3.org/2000/svg">
@@ -267,11 +288,11 @@ Nobody has to tell the mint it won. The mint watches the blockchain itself and r
 <figcaption><p>The reward lands at the mint's address, written into the chain for everyone — including the mint — to see.</p></figcaption>
 </figure>
 
-### The Epoch Turns Over
+<h3 id="the-epoch-turns-over">The Epoch Turns Over</h3>
 
-The moment that reward lands, the old epoch closes and a new one opens, named after the winning block's height.
+<p>The moment that reward lands, the old epoch closes and a new one opens, named after the winning block's height.</p>
 
-The turnover is instant on purpose. The very next share to arrive is already part of the new round, so it gets stamped with the new epoch's name. If rotation waited, late shares would leak into the old round and water down what the people in that round had earned.
+<p>The turnover is instant on purpose. The very next share to arrive is already part of the new round, so it gets stamped with the new epoch's name. If rotation waited, late shares would leak into the old round and water down what the people in that round had earned.</p>
 
 <figure class="epoch-fig">
 <svg viewBox="0 0 640 250" role="img" aria-label="A close-up of the boundary: the winning block at height 840112 ends epoch 840000 and starts epoch 840112. Shares mined before the boundary carry the old stamp; shares mined after carry the new one." xmlns="http://www.w3.org/2000/svg">
@@ -317,20 +338,22 @@ The turnover is instant on purpose. The very next share to arrive is already par
 <figcaption><p>The reward's own block starts the new epoch, and the very next share is stamped with the new name.</p></figcaption>
 </figure>
 
-There is one catch: the brand-new epoch starts life on probation. That is the next idea, and it's the most important one on this page.
+<p>There is one catch: the brand-new epoch starts life on probation. That is the next idea, and it's the most important one on this page.</p>
 
-### The Maturity Window
+<h3 id="the-maturity-window">The Maturity Window</h3>
 
-For the first few blocks after a win, the new epoch's quotes are marked <em>waiting</em>. They sit safely in the mint's book, but they cannot be cashed into notes yet.
+<p>For the first few blocks after a win, the new epoch's quotes are marked <em>waiting</em>. They sit safely in the mint's book, but they cannot be cashed into notes yet.</p>
 
-Why wait? Because the blockchain is allowed to change its mind about its newest blocks — we'll watch that happen in the next section — and printing a note is the one thing hashpool can never undo. So the mint holds the new epoch's quotes until the winning block has **six confirmations** — the block itself plus five more built on top, the same standard the rest of the bitcoin economy uses for finality. Then the epoch is <em>final</em>, and every waiting quote unlocks at once.
+<p>Why wait? Because the blockchain is allowed to change its mind about its newest blocks — we'll watch that happen in the next section — and printing a note is the one thing hashpool can never undo. So the mint holds the new epoch's quotes until the winning block has <strong>six confirmations</strong> — the block itself plus five more built on top, the same standard the rest of the bitcoin economy uses for finality. Then the epoch is <em>final</em>, and every waiting quote unlocks at once.</p>
 
-While the clock runs, two things are worth noticing:
+<p>While the clock runs, two things are worth noticing:</p>
 
-- **The old epoch is untouched.** Every quote and note from before the win stays spendable the whole time.
-- **Nothing real is delayed.** Bitcoin itself locks every block reward for 100 blocks before it can be spent. The six-block wait ends long before there was anything to spend anyway.
+<ul>
+<li><strong>The old epoch is untouched.</strong> Every quote and note from before the win stays spendable the whole time.</li>
+<li><strong>Nothing real is delayed.</strong> Bitcoin itself locks every block reward for 100 blocks before it can be spent. The six-block wait ends long before there was anything to spend anyway.</li>
+</ul>
 
-Miners on ordinary pools already know this feeling: it is the classic "immature balance" that appears after a pool finds a block. Hashpool just wears it openly.
+<p>Miners on ordinary pools already know this feeling: it is the classic "immature balance" that appears after a pool finds a block. Hashpool just wears it openly.</p>
 
 <figure class="epoch-fig epoch-anim">
 <svg viewBox="0 0 640 330" role="img" aria-label="Animation: after the winning block at 840112, five more blocks arrive one by one and the confirmation count climbs from one to six. At six, the epoch becomes final and its quotes flip from waiting to ready. A scale bar shows the six-block wait is tiny next to the 100-block lock bitcoin puts on the reward itself." xmlns="http://www.w3.org/2000/svg">
@@ -395,15 +418,15 @@ Miners on ordinary pools already know this feeling: it is the classic "immature 
 <figcaption><p>The maturity window: one confirmation per new block, and at six the epoch is final — every waiting quote flips to ready. The bar shows why nothing real is lost in the wait.</p></figcaption>
 </figure>
 
-### When the Chain Changes Its Mind
+<h3 id="when-the-chain-changes-its-mind">When the Chain Changes Its Mind</h3>
 
-Sometimes two miners find a block at nearly the same moment, and the network briefly disagrees about the newest link of the chain. One branch soon grows longer and wins; blocks on the losing branch are <em>orphaned</em> — struck from history. This is a **reorg**, and at shallow depths bitcoin does it routinely.
+<p>Sometimes two miners find a block at nearly the same moment, and the network briefly disagrees about the newest link of the chain. One branch soon grows longer and wins; blocks on the losing branch are <em>orphaned</em> — struck from history. This is a <strong>reorg</strong>, and at shallow depths bitcoin does it routinely.</p>
 
-So suppose the worst: the pool's winning block gets orphaned before its six confirmations arrive, and the replacement block pays someone else. On the chain, that reward now never happened.
+<p>So suppose the worst: the pool's winning block gets orphaned before its six confirmations arrive, and the replacement block pays someone else. On the chain, that reward now never happened.</p>
 
-Hashpool's answer is quiet: the epoch that block opened simply dissolves. Every quote stamped into the young epoch slides back into the previous epoch — the round that, it turns out, never ended — and unlocks immediately, because that older epoch settled long ago. The shares were honest work, and they still count in full.
+<p>Hashpool's answer is quiet: the epoch that block opened simply dissolves. Every quote stamped into the young epoch slides back into the previous epoch — the round that, it turns out, never ended — and unlocks immediately, because that older epoch settled long ago. The shares were honest work, and they still count in full.</p>
 
-Nobody loses anything, because nothing irreversible ever happened: thanks to the maturity window, not a single note of the young epoch was printed. Quotes are just entries in a book, and entries can be moved. This is exactly the disaster the window exists for — met, absorbed, and shrugged off.
+<p>Nobody loses anything, because nothing irreversible ever happened: thanks to the maturity window, not a single note of the young epoch was printed. Quotes are just entries in a book, and entries can be moved. This is exactly the disaster the window exists for — met, absorbed, and shrugged off.</p>
 
 <figure class="epoch-fig epoch-anim">
 <svg viewBox="0 0 640 490" role="img" aria-label="Animation: the pool's block at height 840112 wins and a provisional epoch opens. A competing block at the same height appears and its branch grows longer, so the pool's block is orphaned. The young epoch dissolves, its quotes slide back into epoch 840000's page of the book, and they are immediately ready — nothing was lost." xmlns="http://www.w3.org/2000/svg">
@@ -449,24 +472,26 @@ Nobody loses anything, because nothing irreversible ever happened: thanks to the
 <figcaption><p>The reorg, absorbed: the boundary dissolves, the quotes slide back into the round that never ended, and the work still counts. Nothing was printed, so nothing is lost.</p></figcaption>
 </figure>
 
-One honest footnote: a reorg deeper than six blocks, arriving after notes exist, would genuinely hurt — but that is the same bet every pool, exchange, and bitcoin user makes when they treat six confirmations as settled. The wait doesn't make the risk zero; it buys it down to the level the whole bitcoin economy already lives with.
+<p>One honest footnote: a reorg deeper than six blocks, arriving after notes exist, would genuinely hurt — but that is the same bet every pool, exchange, and bitcoin user makes when they treat six confirmations as settled. The wait doesn't make the risk zero; it buys it down to the level the whole bitcoin economy already lives with.</p>
 
-### After the Epoch
+<h3 id="after-the-epoch">After the Epoch</h3>
 
-And when an epoch's round is over? Its notes don't vanish — they sit in wallets, waiting to be redeemed for bitcoin, and how that redemption works is the settlement chapter of hashpool's story, still being written.
+<p>And when an epoch's round is over? Its notes don't vanish — they sit in wallets, waiting to be redeemed for bitcoin, and how that redemption works is the settlement chapter of hashpool's story, still being written.</p>
 
-Hashpool is under heavy development. You can follow along, or join in, at [github.com/vnprc/hashpool](https://github.com/vnprc/hashpool).
+<p>Hashpool is under heavy development. You can follow along, or join in, at <a href="https://github.com/vnprc/hashpool">github.com/vnprc/hashpool</a>.</p>
 
-### The Whole Story
+<h3 id="the-whole-story">The Whole Story</h3>
 
-1. Your miner streams **shares** to the pool — proof of honest work.
-2. The mint writes each share into its book as a **quote**: a promise it will honor.
-3. Your wallet cashes quotes in for **ehash** notes, each stamped with the current **epoch** — one round of the pool's history, named after the block height where the last reward landed.
-4. The pool wins a block; the **coinbase** pays the reward straight to the mint's address, and the mint sees it on the chain.
-5. The epoch turns over instantly — but the new epoch's quotes **wait six confirmations** before they can become notes, a wait that delays nothing real.
-6. If a **reorg** undoes the win first, the young epoch dissolves and its quotes slide back into the previous round, ready at once. Nothing irreversible had happened, so nothing is lost.
+<ol>
+<li>Your miner streams <strong>shares</strong> to the pool — proof of honest work.</li>
+<li>The mint writes each share into its book as a <strong>quote</strong>: a promise it will honor.</li>
+<li>Your wallet cashes quotes in for <strong>ehash</strong> notes, each stamped with the current <strong>epoch</strong> — one round of the pool's history, named after the block height where the last reward landed.</li>
+<li>The pool wins a block; the <strong>coinbase</strong> pays the reward straight to the mint's address, and the mint sees it on the chain.</li>
+<li>The epoch turns over instantly — but the new epoch's quotes <strong>wait six confirmations</strong> before they can become notes, a wait that delays nothing real.</li>
+<li>If a <strong>reorg</strong> undoes the win first, the young epoch dissolves and its quotes slide back into the previous round, ready at once. Nothing irreversible had happened, so nothing is lost.</li>
+</ol>
 
-### Glossary
+<h3 id="glossary">Glossary</h3>
 
 <dl class="epoch-glossary">
 <dt>share</dt><dd>A near-miss solution to the mining puzzle — proof a miner is really working.</dd>

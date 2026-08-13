@@ -434,3 +434,210 @@
   font-size: 0.95rem;
   color: var(--secondary);
 }
+
+/* Epoch Lifecycle Article Styles (articles/mining-epochs) */
+
+/* Diagram figures: epoch colors are theme-aware CSS variables; the SVG markup
+   carries light-mode presentation attributes as a fallback (feeds, no CSS),
+   and these classes override them so both site themes render correctly. */
+.epoch-fig {
+  --epA: #b45309; /* epoch A: amber */
+  --epB: #0d9488; /* epoch B: teal */
+  margin: 28px auto 32px;
+  text-align: center;
+}
+
+.dark .epoch-fig {
+  --epA: #d97706;
+}
+
+.epoch-fig svg {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.epoch-fig figcaption {
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.epoch-fig text {
+  fill: var(--content);
+}
+
+.epoch-fig .t1 {
+  fill: var(--primary);
+}
+
+.epoch-fig .t2 {
+  fill: var(--secondary);
+}
+
+.epoch-fig .fA {
+  fill: var(--epA);
+}
+
+.epoch-fig .sA {
+  stroke: var(--epA);
+}
+
+.epoch-fig .fB {
+  fill: var(--epB);
+}
+
+.epoch-fig .sB {
+  stroke: var(--epB);
+}
+
+.epoch-fig .fN {
+  fill: var(--secondary);
+}
+
+.epoch-fig .sN {
+  stroke: var(--secondary);
+}
+
+.epoch-fig .fI {
+  fill: var(--primary);
+}
+
+.epoch-fig .lnk {
+  fill: var(--secondary);
+}
+
+.epoch-fig .card,
+.epoch-fig .blk {
+  fill: var(--theme);
+}
+
+.epoch-fig .card {
+  stroke: var(--border);
+}
+
+.epoch-fig .blk {
+  stroke: var(--secondary);
+}
+
+.dark .epoch-fig .card,
+.dark .epoch-fig .blk {
+  fill: var(--entry);
+}
+
+.dark .epoch-fig .sBd {
+  stroke: var(--tertiary);
+}
+
+.epoch-fig marker path {
+  fill: var(--secondary);
+}
+
+/* Animated figures. Every animated element also reads correctly when frozen:
+   the markup is authored in its final, fully-annotated state, and the
+   animations replay how it got there. With animations off (reduced motion,
+   print, or no CSS at all) the figures are complete static diagrams. */
+
+.epoch-fig .an {
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+/* -- maturity window figure: 14s loop -- */
+
+.epoch-fig .a-p1,
+.epoch-fig .a-p2,
+.epoch-fig .a-p3,
+.epoch-fig .a-p4,
+.epoch-fig .a-p5,
+.epoch-fig .a-c1,
+.epoch-fig .a-c2,
+.epoch-fig .a-c3,
+.epoch-fig .a-c4,
+.epoch-fig .a-c5,
+.epoch-fig .a-c6,
+.epoch-fig .a-pre,
+.epoch-fig .a-fin,
+.epoch-fig .a-dim,
+.epoch-fig .a-lit {
+  animation-duration: 14s;
+}
+
+.epoch-fig .a-p1 { animation-name: epm-p1; }
+.epoch-fig .a-p2 { animation-name: epm-p2; }
+.epoch-fig .a-p3 { animation-name: epm-p3; }
+.epoch-fig .a-p4 { animation-name: epm-p4; }
+.epoch-fig .a-p5 { animation-name: epm-p5; }
+.epoch-fig .a-c1 { animation-name: epm-c1; }
+.epoch-fig .a-c2 { animation-name: epm-c2; }
+.epoch-fig .a-c3 { animation-name: epm-c3; }
+.epoch-fig .a-c4 { animation-name: epm-c4; }
+.epoch-fig .a-c5 { animation-name: epm-c5; }
+.epoch-fig .a-c6 { animation-name: epm-c6; }
+.epoch-fig .a-pre { animation-name: epm-pre; }
+.epoch-fig .a-fin { animation-name: epm-fin; }
+.epoch-fig .a-dim { animation-name: epm-dim; }
+.epoch-fig .a-lit { animation-name: epm-lit; }
+
+@keyframes epm-p1 { 0%, 7% { opacity: 0; } 9%, 95% { opacity: 1; } 99%, 100% { opacity: 0; } }
+@keyframes epm-p2 { 0%, 14% { opacity: 0; } 16%, 95% { opacity: 1; } 99%, 100% { opacity: 0; } }
+@keyframes epm-p3 { 0%, 21% { opacity: 0; } 23%, 95% { opacity: 1; } 99%, 100% { opacity: 0; } }
+@keyframes epm-p4 { 0%, 28% { opacity: 0; } 30%, 95% { opacity: 1; } 99%, 100% { opacity: 0; } }
+@keyframes epm-p5 { 0%, 35% { opacity: 0; } 37%, 95% { opacity: 1; } 99%, 100% { opacity: 0; } }
+@keyframes epm-c1 { 0%, 7% { opacity: 1; } 9%, 98% { opacity: 0; } 100% { opacity: 1; } }
+@keyframes epm-c2 { 0%, 7% { opacity: 0; } 9%, 14% { opacity: 1; } 16%, 100% { opacity: 0; } }
+@keyframes epm-c3 { 0%, 14% { opacity: 0; } 16%, 21% { opacity: 1; } 23%, 100% { opacity: 0; } }
+@keyframes epm-c4 { 0%, 21% { opacity: 0; } 23%, 28% { opacity: 1; } 30%, 100% { opacity: 0; } }
+@keyframes epm-c5 { 0%, 28% { opacity: 0; } 30%, 35% { opacity: 1; } 37%, 100% { opacity: 0; } }
+@keyframes epm-c6 { 0%, 35% { opacity: 0; } 37%, 95% { opacity: 1; } 99%, 100% { opacity: 0; } }
+@keyframes epm-pre { 0%, 44% { opacity: 1; } 47%, 98% { opacity: 0; } 100% { opacity: 1; } }
+@keyframes epm-fin { 0%, 44% { opacity: 0; } 47%, 95% { opacity: 1; } 99%, 100% { opacity: 0; } }
+@keyframes epm-dim { 0%, 44% { opacity: 1; } 47%, 95% { opacity: 0.25; } 99%, 100% { opacity: 1; } }
+@keyframes epm-lit { 0%, 44% { opacity: 0.25; } 47%, 95% { opacity: 1; } 99%, 100% { opacity: 0.25; } }
+
+/* -- reorg figure: 18s loop -- */
+
+.epoch-fig .a-up1,
+.epoch-fig .a-up2,
+.epoch-fig .a-orph,
+.epoch-fig .a-rpre,
+.epoch-fig .a-rfin,
+.epoch-fig .a-slide,
+.epoch-fig .a-s1,
+.epoch-fig .a-s2,
+.epoch-fig .a-s3 {
+  animation-duration: 18s;
+}
+
+.epoch-fig .a-up1 { animation-name: epr-up1; }
+.epoch-fig .a-up2 { animation-name: epr-up2; }
+.epoch-fig .a-orph { animation-name: epr-orph; }
+.epoch-fig .a-rpre { animation-name: epr-pre; }
+.epoch-fig .a-rfin { animation-name: epr-fin; }
+.epoch-fig .a-slide { animation-name: epr-slide; }
+.epoch-fig .a-s1 { animation-name: epr-s1; }
+.epoch-fig .a-s2 { animation-name: epr-s2; }
+.epoch-fig .a-s3 { animation-name: epr-s3; }
+
+@keyframes epr-pre { 0%, 38% { opacity: 1; } 43%, 97% { opacity: 0; } 100% { opacity: 1; } }
+@keyframes epr-up1 { 0%, 15% { opacity: 0; } 18%, 94% { opacity: 1; } 98%, 100% { opacity: 0; } }
+@keyframes epr-up2 { 0%, 29% { opacity: 0; } 32%, 94% { opacity: 1; } 98%, 100% { opacity: 0; } }
+@keyframes epr-orph { 0%, 41% { opacity: 0; } 44%, 94% { opacity: 1; } 98%, 100% { opacity: 0; } }
+@keyframes epr-fin { 0%, 49% { opacity: 0; } 53%, 94% { opacity: 1; } 98%, 100% { opacity: 0; } }
+@keyframes epr-slide {
+  0%, 52% { opacity: 0; transform: translate(322px, -30px); }
+  56% { opacity: 0.6; transform: translate(322px, -30px); }
+  66%, 94% { opacity: 1; transform: translate(0, 0); }
+  98%, 100% { opacity: 0; transform: translate(322px, -30px); }
+}
+@keyframes epr-s1 { 0%, 29% { opacity: 1; } 33%, 96% { opacity: 0.35; } 100% { opacity: 1; } }
+@keyframes epr-s2 { 0%, 29% { opacity: 0.35; } 33%, 49% { opacity: 1; } 53%, 100% { opacity: 0.35; } }
+@keyframes epr-s3 { 0%, 49% { opacity: 0.35; } 53%, 94% { opacity: 1; } 98%, 100% { opacity: 0.35; } }
+
+/* Frozen fallback: the authored markup is the final state, so simply stop. */
+@media (prefers-reduced-motion: reduce), print {
+  .epoch-fig .an {
+    animation: none !important;
+  }
+}

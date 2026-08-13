@@ -453,6 +453,7 @@
 
 .epoch-fig svg {
   display: block;
+  width: 100%;
   margin: 0 auto;
   max-width: 100%;
   height: auto;
@@ -462,6 +463,15 @@
   max-width: 560px;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
+}
+
+.epoch-glossary {
+  text-align: center;
+}
+
+.epoch-glossary dd {
+  margin-inline-start: 0;
 }
 
 .epoch-fig text {

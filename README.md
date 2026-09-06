@@ -1,3 +1,43 @@
+# hashpool.dev
+
+Content and publishing for <https://hashpool.dev>. A Zola site; everything below
+the horizontal rule is the upstream theme's own README.
+
+## Publishing
+
+    just dry      # what would change, changing nothing
+    just deploy   # publish
+
+`just deploy` builds the site into the Nix store and syncs it to the shared
+hosting docroot, deleting server files that are no longer part of the site.
+Removals move to `deploy-trash/` on the server rather than being destroyed, so a
+mistake is recoverable. Run `just dry` first the day the host changes something.
+
+`deploy.filter` lists the docroot paths that belong to the host rather than to
+this site. `.well-known/` is the one that matters: DirectAdmin answers ACME
+challenges from it, so deleting it looks harmless and breaks certificate renewal
+about sixty days later.
+
+### Setup, once per machine
+
+The account holds every domain, so this is per machine and not per site:
+
+    nix run nixpkgs#rclone -- config
+
+Create a remote named `shared`, type `ftp`, host `nl-sh1.mynymhosting.net`, the
+DirectAdmin FTP user, `explicit_tls` on. The password is entered at a prompt, so
+it reaches neither argv nor shell history, and it is typed once.
+
+Connect by hostname, never by IP: the server's certificate names
+`nl-sh1.mynymhosting.net` and nothing else, so an IP fails TLS verification.
+
+### Adding another site to this account
+
+Copy `justfile` and `deploy.filter` into the new site's repository and change
+the `site :=` line. Nothing else differs.
+
+---
+
 # Zola PaperMod
 
 ![](screenshot.png)

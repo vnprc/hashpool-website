@@ -5,18 +5,27 @@ the horizontal rule is the upstream theme's own README.
 
 ## Publishing
 
-    just dry      # what would change, changing nothing
-    just deploy   # publish
+    allod site deploy --dry-run   # what would change, changing nothing
+    allod site deploy             # publish
 
-`just deploy` builds the site into the Nix store and syncs it to the shared
-hosting docroot, deleting server files that are no longer part of the site.
-Removals move to `deploy-trash/` on the server rather than being destroyed, so a
-mistake is recoverable. Run `just dry` first the day the host changes something.
+It builds this repository's default flake package and syncs that store path to
+the shared-hosting docroot, deleting server files that are no longer part of the
+site. Removals move to `deploy-trash/` on the server rather than being
+destroyed, so a mistake is recoverable.
 
-`deploy.filter` lists the docroot paths that belong to the host rather than to
-this site. `.well-known/` is the one that matters: DirectAdmin answers ACME
-challenges from it, so deleting it looks harmless and breaks certificate renewal
-about sixty days later.
+There is no lock to bump: the content is this repository, so a commit and a
+deploy is the whole cycle.
+
+`site.toml` names the domain and nothing else. The docroot is derived from it,
+and there is deliberately no flag or environment variable that can point a
+deploy at a different site -- one hosting account owns every domain's docroot on
+this host, so a redirected sync would delete a sibling site.
+
+The list of docroot paths that belong to the host rather than to the site lives
+in `allod site deploy`, not here. That is the point of the command: `.well-known/`
+must survive a deploy because DirectAdmin answers ACME challenges from it, and a
+per-repository copy of that rule would eventually be wrong in one repository and
+break certificate renewal about sixty days later.
 
 ### Setup, once per machine
 
@@ -33,8 +42,8 @@ Connect by hostname, never by IP: the server's certificate names
 
 ### Adding another site to this account
 
-Copy `justfile` and `deploy.filter` into the new site's repository and change
-the `site :=` line. Nothing else differs.
+Give it a `flake.nix` whose default package builds the site, and a `site.toml`
+naming its domain. Nothing else.
 
 ---
 

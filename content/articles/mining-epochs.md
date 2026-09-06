@@ -4,7 +4,10 @@ slug = "mining-epochs"
 template = "article.html"
 weight = 2
 description = """
-Follow one mining share through its lifecycle: how it becomes ehash, what an epoch is, why shares found just after a block win must wait before becoming ehash, and how a reorg before finality quietly unwinds without anyone losing anything.
+- How a share becomes ehash
+- What an epoch is
+- Why shares found just after a block must wait before becoming ehash
+- How a block reorg unwinds without anyone losing funds
 """
 +++
 
@@ -38,7 +41,7 @@ What it gets back are **ehash** tokens: bearer instruments, like paper banknotes
 
 {{ epoch_ehash_minting() }}
 
-### Every Epoch Is Its Own Currency
+-### Every Epoch Is Its Own Currency
 
 The pool's life is divided into rounds. A round begins when the pool wins a block and ends when it wins the next one. In hashpool, these rounds are called **epochs**.
 

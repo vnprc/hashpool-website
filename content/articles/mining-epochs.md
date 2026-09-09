@@ -4,10 +4,7 @@ slug = "mining-epochs"
 template = "article.html"
 weight = 2
 description = """
-- How a share becomes ehash
-- What an epoch is
-- Why shares found just after a block must wait before becoming ehash
-- How a block reorg unwinds without anyone losing funds
+A pool's income arrives one block reward at a time, and each reward takes a few blocks to settle. Every ehash token has to belong to exactly one of them. Follow a single share through that problem: how epochs tie it to the right reward, why it waits before becoming ehash, and what happens if pool mines an orphan block.
 """
 +++
 

@@ -14,8 +14,9 @@ on every edit. The pages are built by the same zola that publishes the site,
 with the address swapped for the local one, so what is shown is what a deploy
 would ship.
 
-An edit that breaks the build leaves the last good pages up. The error is in
-the journal of the unit `allod site serve` started, `allod-preview-<site id>`:
+An edit that breaks the build shows a "Zola Build Error" page in the browser,
+with the template error and line. The same error is in the journal of the
+unit `allod site serve` started, `allod-preview-<site id>`:
 
     journalctl --user -f -u allod-preview-<site id>
 

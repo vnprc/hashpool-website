@@ -29,7 +29,7 @@
       {% if page.taxonomies.tags %}
       <ul class="post-tags">
           {% for tag in page.taxonomies.tags %}
-          {% set tag_url = get_taxonomy_url(kind="tags", name=tag, lang=page.lang) %}
+          {% set tag_url = get_taxonomy_url(kind="tags", term=tag, lang=page.lang) %}
           <li><a href="{{ tag_url }}">{{ tag }}</a></li>
           {% endfor %}
       </ul>

@@ -21,7 +21,8 @@ writeShellScript "preview" ''
   set -eu
   PREVIEW_DIR=$(${coreutils}/bin/mktemp -d)
   export PREVIEW_DIR
-  trap '${coreutils}/bin/rm -rf "$PREVIEW_DIR"' EXIT
+  # TERM is ignored for the removal: a stop signals every process of the unit.
+  trap 'trap "" TERM; ${coreutils}/bin/rm -rf "$PREVIEW_DIR"' EXIT
   ${build}
   ${watchexec}/bin/watchexec --postpone --on-busy-update queue -- ${build} &
   ${live-server}/bin/live-server \

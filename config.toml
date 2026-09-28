@@ -29,9 +29,14 @@ include_content = true
 index_format = "elasticlunr_json"
 
 [markdown]
-# Whether to do syntax highlighting
-# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
-highlight_code = true
+# 0.23's own default for this is true; 0.21 had no such field and added
+# nothing, so this keeps markdown-rendered external links unchanged.
+external_links_external = false
+
+[markdown.highlighting]
+# base16-ocean-dark no longer exists; material-theme-palenight is the closest
+# match measured against this site's own live output (see the port's notes).
+theme = "material-theme-palenight"
 
 [extra]
 copyright_url = "https://forge.anarch.diy/vnprc"

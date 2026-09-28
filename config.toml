@@ -29,13 +29,13 @@ include_content = true
 index_format = "elasticlunr_json"
 
 [markdown]
-# 0.23's own default for this is true; 0.21 had no such field and added
-# nothing, so this keeps markdown-rendered external links unchanged.
+# Kept false: turning this on stamps rel=external onto every external link,
+# which the published pages do not carry.
 external_links_external = false
 
 [markdown.highlighting]
-# base16-ocean-dark no longer exists; material-theme-palenight is the closest
-# match measured against this site's own live output (see the port's notes).
+# Closest match by colour to the pages as published; re-measure before
+# swapping it for another.
 theme = "material-theme-palenight"
 
 [extra]

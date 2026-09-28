@@ -1,6 +1,7 @@
 {
   runCommand,
   zola,
+  cacert,
   websiteSrc,
 }:
 
@@ -16,6 +17,10 @@ runCommand "hashpool-site"
   {
     src = websiteSrc;
     nativeBuildInputs = [ zola ];
+    # zola 0.23 builds an HTTP client at startup even when load_data is never
+    # called; the sandbox's certless build fails with "No CA certificates
+    # were loaded from the system" without this.
+    SSL_CERT_FILE = "${cacert}/etc/ssl/certs/ca-bundle.crt";
   }
   ''
     cp -R --no-preserve=mode "$src"/. .

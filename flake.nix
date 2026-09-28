@@ -14,5 +14,10 @@
         site = pkgs.callPackage ./nix/site.nix { websiteSrc = self; };
         default = self.packages.${system}.site;
       };
+
+      apps.${system}.preview = {
+        type = "app";
+        program = toString (pkgs.callPackage ./nix/preview.nix { });
+      };
     };
 }

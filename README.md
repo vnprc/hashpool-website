@@ -3,6 +3,24 @@
 Content and publishing for <https://hashpool.dev>. A Zola site; everything below
 the horizontal rule is the upstream theme's own README.
 
+## Preview
+
+    allod site serve          # prints the address once the page answers
+    allod site serve --stop
+
+Run it from anywhere inside this repository or a worktree of it. It serves on
+this site's `preview_port` in the repository registry and reloads the browser
+on every edit. The pages are built by the same zola that publishes the site,
+with the address swapped for the local one, so what is shown is what a deploy
+would ship.
+
+An edit that breaks the build leaves the last good pages up. The error is in
+the journal of the unit `allod site serve` started, `allod-preview-<site id>`:
+
+    journalctl --user -f -u allod-preview-<site id>
+
+`nix/preview.nix` is the whole of it.
+
 ## Publishing
 
     allod site deploy --dry-run   # what would change, changing nothing

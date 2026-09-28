@@ -20,7 +20,7 @@ An attempt that comes close is still worth something: it proves the machine is g
 
 Once in a while, a share doesn't just come close, it finds a new **bitcoin block** and earns the mining reward the whole pool has been working toward.
 
-{{ epoch_share_flow() }}
+{{<epoch_share_flow/>}}
 
 ### The Mint Records It
 
@@ -28,7 +28,7 @@ Hashpool's pool hands every accepted share to its cashier — an online software
 
 The mint keeps a record of work done. For each share it writes one entry: this share arrived, it is worth this much, and it may be cashed in later. An entry in that ledger is called a **quote**. Nothing has been handed out yet — a quote is just the mint's written promise.
 
-{{ epoch_quote_book() }}
+{{<epoch_quote_book/>}}
 
 ### Quotes Become ehash
 
@@ -36,7 +36,7 @@ Your wallet checks the ledger, finds your quotes, and cashes them in.
 
 What it gets back are **ehash** tokens: bearer instruments, like paper banknotes. Whoever holds them owns them. The cashing-in uses blind signatures, so the mint cannot tell which tokens ended up in whose wallet — [What is Hashpool?](/articles/what-is-hashpool/) explains that trick.
 
-{{ epoch_ehash_minting() }}
+{{<epoch_ehash_minting/>}}
 
 -### Every Epoch Is Its Own Currency
 
@@ -44,13 +44,13 @@ The pool's life is divided into rounds. A round begins when the pool wins a bloc
 
 Each epoch issues its own currency. Every ehash token is tagged with both the hashpool instance that minted it and the block height that opened its epoch. That combination lets several hashpool instances use one mint while each issues a different currency for its current epoch. Two tokens from the same epoch are interchangeable, while tokens from different epochs are different currencies — like banknote series with different years printed on them.
 
-{{ epoch_note_anatomy() }}
+{{<epoch_note_anatomy/>}}
 
 Why separate currency for each round? Because all shares in one epoch split the same mining reward, and both the reward amount and the number of shares are unknown until the reward is won. They belong together, and it would be unfair to mix them with another round's work.
 
 On the blockchain, the pool's history looks like colored spans between wins:
 
-{{ epoch_timeline() }}
+{{<epoch_timeline/>}}
 
 The currency name is simply "hash" plus the pool's identifier and the block height that opened the epoch. The pool and height keep currencies from different hashpool instances and epochs from getting mixed up.
 
@@ -62,7 +62,7 @@ A block's very first transaction — called the **coinbase** — is the one that
 
 Nobody has to tell the mint it won. The mint watches the blockchain itself and recognizes its own address in the new block. A message can get lost; a payment recorded on the blockchain cannot.
 
-{{ epoch_block_win() }}
+{{<epoch_block_win/>}}
 
 ### The Epoch Turns Over
 
@@ -70,7 +70,7 @@ The moment that reward lands, the old epoch closes and a new one opens. The new 
 
 The turnover is instant on purpose. The very next share to arrive is already part of the new round, so its quote is stamped with the new currency's name. If rotation waited, late shares would leak into the old round and dilute what the people in that round had earned.
 
-{{ epoch_turnover() }}
+{{<epoch_turnover/>}}
 
 There is one catch: the brand-new epoch starts life on probation.
 
@@ -87,7 +87,7 @@ The wait separates two different groups of work:
 
 Miners on ordinary pools already know this kind of wait as an "immature balance." Hashpool represents it explicitly with unpaid quotes.
 
-{{ epoch_maturity() }}
+{{<epoch_maturity/>}}
 
 ### When the Chain Changes Its Mind
 
@@ -99,7 +99,7 @@ Hashpool's answer is quiet: the epoch that block opened simply dissolves. Every 
 
 Nobody loses anything, because nothing irreversible ever happened: thanks to the maturity window, not a single token of the young epoch was printed. Quotes are just entries in a ledger, and entries can be moved. This is why the window exists — so hashpool can shrug off reorgs.
 
-{{ epoch_reorg() }}
+{{<epoch_reorg/>}}
 
 One honest footnote: a reorg deeper than six blocks, arriving after tokens exist, would genuinely hurt — but that is the same bet every pool, exchange, and bitcoin user makes when they treat six confirmations as settled. The wait doesn't make the risk zero; it brings the risk down to a level the whole bitcoin economy already lives with.
 

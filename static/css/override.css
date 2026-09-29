@@ -636,3 +636,22 @@
     animation: none !important;
   }
 }
+
+/* Header: the title and the theme switch are one unit, and a menu that does
+   not fit beside them takes its own row and wraps its links. */
+.logo,
+.logo-switches {
+  flex-wrap: nowrap;
+}
+.logo {
+  flex-shrink: 0;
+}
+#menu {
+  flex-wrap: wrap;
+  overflow-x: visible;
+  column-gap: var(--gap);
+  line-height: 36px;
+}
+#menu li + li {
+  margin-inline-start: 0;
+}

@@ -101,6 +101,9 @@
                         if (nav.contains(document.activeElement)) button.focus();
                     }
                 });
+                document.addEventListener("click", function (e) {
+                    if (!nav.contains(e.target)) set(false);
+                });
                 nav.classList.add("collapsible");
             })();
         </script>

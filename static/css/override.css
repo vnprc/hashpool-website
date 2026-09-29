@@ -663,15 +663,27 @@
   font-size: 26px;
 }
 @media (max-width: 56em) {
+  .nav.collapsible {
+    position: relative;
+  }
   .nav.collapsible #menu-toggle {
     display: block;
   }
   .nav.collapsible #menu {
     display: none;
-    flex-basis: 100%;
+    position: absolute;
+    z-index: 10;
+    top: 100%;
+    inset-inline-end: var(--gap);
     flex-direction: column;
-    margin-bottom: 12px;
+    min-width: 12rem;
+    margin: 0;
+    padding: 4px 20px;
     line-height: 44px;
+    background: var(--entry);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
   }
   .nav.collapsible #menu.open {
     display: flex;

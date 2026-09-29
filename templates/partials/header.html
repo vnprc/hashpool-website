@@ -87,20 +87,21 @@
                 var nav = document.querySelector(".nav");
                 var button = document.getElementById("menu-toggle");
                 var menu = document.getElementById("menu");
+                if (!nav || !button || !menu) return;
                 function set(open) {
                     menu.classList.toggle("open", open);
                     button.setAttribute("aria-expanded", open);
                 }
-                nav.classList.add("collapsible");
                 button.addEventListener("click", function () {
                     set(!menu.classList.contains("open"));
                 });
-                nav.addEventListener("keydown", function (e) {
+                document.addEventListener("keydown", function (e) {
                     if (e.key === "Escape" && menu.classList.contains("open")) {
                         set(false);
-                        button.focus();
+                        if (nav.contains(document.activeElement)) button.focus();
                     }
                 });
+                nav.classList.add("collapsible");
             })();
         </script>
         {% endif %}

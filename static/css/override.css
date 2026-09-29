@@ -637,8 +637,6 @@
   }
 }
 
-/* Header: the title and the theme switch are one unit, and a menu that does
-   not fit beside them takes its own row and wraps its links. */
 .logo,
 .logo-switches {
   flex-wrap: nowrap;
@@ -656,10 +654,9 @@
   margin-inline-start: 0;
 }
 
-/* Below the width at which the menu stops fitting beside the title, its links
-   go behind the menu button. 56em is that width; raise it when a link is
-   added. Without the header's script there is no .collapsible, and the menu
-   wraps in its own row as above. */
+/* 56em is the width at which the menu stops fitting beside the title: raise
+   it when a link is added. The script in header.html sets .collapsible, so
+   without scripts the links are never hidden. */
 #menu-toggle {
   display: none;
   margin: auto var(--gap);

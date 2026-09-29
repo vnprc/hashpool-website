@@ -655,3 +655,28 @@
 #menu li + li {
   margin-inline-start: 0;
 }
+
+/* Below the width at which the menu stops fitting beside the title, its links
+   go behind the menu button. 56em is that width; raise it when a link is
+   added. Without the header's script there is no .collapsible, and the menu
+   wraps in its own row as above. */
+#menu-toggle {
+  display: none;
+  margin: auto var(--gap);
+  font-size: 26px;
+}
+@media (max-width: 56em) {
+  .nav.collapsible #menu-toggle {
+    display: block;
+  }
+  .nav.collapsible #menu {
+    display: none;
+    flex-basis: 100%;
+    flex-direction: column;
+    margin-bottom: 12px;
+    line-height: 44px;
+  }
+  .nav.collapsible #menu.open {
+    display: flex;
+  }
+}

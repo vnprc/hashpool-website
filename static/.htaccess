@@ -10,17 +10,14 @@ FileETag None
 <IfModule mod_headers.c>
   Header unset ETag
   Header unset Last-Modified
-  # Pages and scripts: a returning visitor sees a deploy within ten minutes.
   <FilesMatch "\.(html|js)$">
     Header set Cache-Control "max-age=600"
   </FilesMatch>
-  # The stylesheets are linked with a content hash (cachebust in head.html), so a
-  # change is a new URL and the old one can stay cached for a year.
+  # Every .css is held for a year under its address: link each one with
+  # cachebust=true, as head.html does, or a change to it never arrives.
   <FilesMatch "\.css$">
     Header set Cache-Control "max-age=31536000, immutable"
   </FilesMatch>
-  # Images and icons are linked by plain name: a day bounds how long a replaced
-  # file under the same name stays stale.
   <FilesMatch "\.(webp|png|jpg|jpeg|svg|ico)$">
     Header set Cache-Control "max-age=86400"
   </FilesMatch>

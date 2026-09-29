@@ -1,0 +1,27 @@
+# Cache policy for the published site. Zola copies this file into the web root.
+#
+# The build pins every file's mtime to the epoch so deploys compare cleanly, which
+# leaves Last-Modified and Apache's size-plus-mtime ETag unable to tell a same-size
+# change from no change: a browser revalidating either gets 304 and keeps the old
+# copy. Drop both validators and let max-age drive a full refetch; the pages are
+# small. Without any Cache-Control, browsers apply heuristic freshness of a tenth of
+# the apparent age since 1970, about five years, and never ask again.
+FileETag None
+<IfModule mod_headers.c>
+  Header unset ETag
+  Header unset Last-Modified
+  # Pages and scripts: a returning visitor sees a deploy within ten minutes.
+  <FilesMatch "\.(html|js)$">
+    Header set Cache-Control "max-age=600"
+  </FilesMatch>
+  # The stylesheets are linked with a content hash (cachebust in head.html), so a
+  # change is a new URL and the old one can stay cached for a year.
+  <FilesMatch "\.css$">
+    Header set Cache-Control "max-age=31536000, immutable"
+  </FilesMatch>
+  # Images and icons are linked by plain name: a day bounds how long a replaced
+  # file under the same name stays stale.
+  <FilesMatch "\.(webp|png|jpg|jpeg|svg|ico)$">
+    Header set Cache-Control "max-age=86400"
+  </FilesMatch>
+</IfModule>
